@@ -503,13 +503,31 @@ http://127.0.0.1:8090/call/sdk/record/bargraph/total
 
 请求参数：无
 
+请求路径：http://127.0.0.1:8110/contract/month/total
+
+/system/contract/month/total
+
+请求类型：GET
+
 返回参数：
 
 ```java
-
+{
+    "returnCode": "0000",
+    "returnMsg": "Success",
+    "nonceStr": "56c95d540c58420d92df2580129d34fe",
+    "success": true,
+    "data": {
+        "thisMonthTotal": 10,
+        "lastMonthTotal": 0,
+        "diff": null
+    }
+}
 ```
 
+说明
 
+"diff": null 的情况用% 表示，前端判空
 
 #### 3.2 月升级量
 
@@ -517,18 +535,42 @@ http://127.0.0.1:8090/call/sdk/record/bargraph/total
 
 请求参数：无
 
+请求路径：http://127.0.0.1:8110/contract/history/month/total
+
+/system/contract/history/month/total
+
+请求类型：GET
+
 返回参数：
 
 ```java
-
+{
+    "returnCode": "0000",
+    "returnMsg": "Success",
+    "nonceStr": "bf86d5391865417ebaca92ab12493c66",
+    "success": true,
+    "data": {
+        "thisMonthTotal": 3,
+        "lastMonthTotal": 0,
+        "diff": null
+    }
+}
 ```
 
 
 
-
+#### 3.3 合约部门分布
 
 合约部门分布---查出合约量前n的部门，多于n个只返回n个，n为入参
+
+
+
+#### 3.3 统计最近30天的合约量
+
 统计最近30天的合约量--返回横纵坐标
+
+
+
 合约上传列表：分页查询合约表（SYSTEM_CONTRACT），入参有时间区间
 合约升级列表：分页查询合约历史表（SYSTEM_CONTRACT_HISTORY），查询结果CONTRACT_ID唯
 
