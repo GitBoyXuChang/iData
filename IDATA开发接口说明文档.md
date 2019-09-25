@@ -1,5 +1,105 @@
 # IDATA开发接口说明文档
 
+## 首页
+
+#### 1、 首页接口
+
+```
+用户数、部门数、合约调用量总量、当天合约调用量、当周合约调用量、当月合约调用量 合约总量、合约升级量总量、当天合约上传量、当天合约升级量、当周合约上传量、当周合约升级量 当月合约上传量、当月合约升级量 
+```
+
+路径：
+
+http://127.0.0.1:8090/index/total
+
+/monitor/index/total
+
+请求类型 POST
+
+请求参数：
+
+```json
+{
+	"applicationId":""
+}
+```
+
+相应参数：
+
+```json
+{
+    "returnCode": "0000",
+    "returnMsg": "Success",
+    "nonceStr": "b9c503b056174fa2bd56ec0c269d0bc9",
+    "success": true,
+    "data": {
+        "userTotal": 6,
+        "organizationTotal": 0,
+        "contractCallTotal": 52,
+        "contractCallTotalOnToday": 1,
+        "contractCallTotalOnWeek": 17,
+        "contractCallTotalOnMonth": 52,
+        "contractTotal": 13,
+        "contractUpgradeTotal": 3,
+        "contractTotalOnToday": 0,
+        "contractUpgradeTotalOnToday": 0,
+        "contractTotalOnWeek": 0,
+        "contractUpgradeTotalOnWeek": 0,
+        "contractTotalOnMonth": 10,
+        "contractUpgradeTotalOnMonth": 3,
+        "projectTotal": 6,
+        "projectTotalOnToday": 0,
+        "projectTotalOnWeek": 1,
+        "projectTotalOnMonth": 5
+    }
+}
+```
+
+说明：
+
+```java
+//用户数
+    private Integer userTotal;
+    //部门数
+    private Integer organizationTotal;
+    //合约调用量总量
+    private Integer contractCallTotal;
+    //当天合约调用量
+    private Integer contractCallTotalOnToday;
+    //当周合约调用量
+    private Integer contractCallTotalOnWeek;
+    //当月合约调用量
+    private Integer contractCallTotalOnMonth;
+    //合约总量
+    private Integer contractTotal;
+    //合约升级量总量
+    private Integer contractUpgradeTotal;
+    //当天合约上传量
+    private Integer contractTotalOnToday;
+    //当天合约升级量
+    private Integer contractUpgradeTotalOnToday;
+    //当周合约上传量
+    private Integer contractTotalOnWeek;
+    //当周合约升级量
+    private Integer contractUpgradeTotalOnWeek;
+    //当月合约上传量
+    private Integer contractTotalOnMonth;
+    //当月合约升级量
+    private Integer contractUpgradeTotalOnMonth;
+    //应用总量
+    private int projectTotal;
+    //当天新增应用量
+    private int projectTotalOnToday;
+    //当周新增应用量
+    private int projectTotalOnWeek;
+    //当月新增应用量
+    private int projectTotalOnMonth;
+```
+
+## 合约延展
+
+## 部门系统
+
 ## 链上数据
 
 ### 1、业务总览
@@ -393,4 +493,47 @@ http://127.0.0.1:8090/call/sdk/record/bargraph/total
 
 
 
-### 2、合约统计
+### 2、用户统计
+
+### 3、合约统计
+
+#### 3.1 月上传量
+
+描述：月上传量--本月的上传量与上个月上传量比较 （合约表）
+
+请求参数：无
+
+返回参数：
+
+```java
+
+```
+
+
+
+#### 3.2 月升级量
+
+月升级量--本月的升级量与上个月升级量比较 （合约历史表）
+
+请求参数：无
+
+返回参数：
+
+```java
+
+```
+
+
+
+
+
+合约部门分布---查出合约量前n的部门，多于n个只返回n个，n为入参
+统计最近30天的合约量--返回横纵坐标
+合约上传列表：分页查询合约表（SYSTEM_CONTRACT），入参有时间区间
+合约升级列表：分页查询合约历史表（SYSTEM_CONTRACT_HISTORY），查询结果CONTRACT_ID唯
+
+### 4、业务统计
+
+## 平台监控
+
+## 系统管理
