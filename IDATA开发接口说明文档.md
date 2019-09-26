@@ -610,9 +610,9 @@ http://127.0.0.1:8090/call/sdk/record/bargraph/total
 }
 ```
 
-请求路径：http://127.0.0.1:8110/contract/organization/distribution
+请求路径：http://127.0.0.1:8110/contract/total/lastDay
 
-/system/contract/organization/distribution
+/system/contract/contract/total/lastDay
 
 请求类型：POST
 
@@ -622,16 +622,36 @@ http://127.0.0.1:8090/call/sdk/record/bargraph/total
 {
     "returnCode": "0000",
     "returnMsg": "Success",
-    "nonceStr": "90e7bd9fdafc4183bc269428bca7d745",
+    "nonceStr": "a3e48475c5cb4f649a1c2e8ad32c034a",
     "success": true,
     "data": [
         {
-            "organizationName": "QATB",
-            "count": 6
+            "date": "2019/09/20",
+            "count": 0
         },
         {
-            "organizationName": "QA",
-            "count": 4
+            "date": "2019/09/21",
+            "count": 3
+        },
+        {
+            "date": "2019/09/22",
+            "count": 0
+        },
+        {
+            "date": "2019/09/23",
+            "count": 0
+        },
+        {
+            "date": "2019/09/24",
+            "count": 0
+        },
+        {
+            "date": "2019/09/25",
+            "count": 0
+        },
+        {
+            "date": "2019/09/26",
+            "count": 0
         }
     ]
 }
