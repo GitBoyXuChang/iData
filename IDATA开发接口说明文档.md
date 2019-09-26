@@ -606,13 +606,13 @@ http://127.0.0.1:8090/call/sdk/record/bargraph/total
 
 ```json
 {
-	"size":5
+	"days":7
 }
 ```
 
 请求路径：http://127.0.0.1:8110/contract/total/lastDay
 
-/system/contract/contract/total/lastDay
+/system/contract/total/lastDay
 
 请求类型：POST
 
