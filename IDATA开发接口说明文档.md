@@ -557,11 +557,44 @@ http://127.0.0.1:8090/call/sdk/record/bargraph/total
 }
 ```
 
-
-
 #### 3.3 合约部门分布
 
 合约部门分布---查出合约量前n的部门，多于n个只返回n个，n为入参
+
+请求参数：
+
+```json
+{
+	"size":5
+}
+```
+
+请求路径：http://127.0.0.1:8110/contract/organization/distribution
+
+/system/contract/organization/distribution
+
+请求类型：POST
+
+返回参数：
+
+```json
+{
+    "returnCode": "0000",
+    "returnMsg": "Success",
+    "nonceStr": "90e7bd9fdafc4183bc269428bca7d745",
+    "success": true,
+    "data": [
+        {
+            "organizationName": "QATB",
+            "count": 6
+        },
+        {
+            "organizationName": "QA",
+            "count": 4
+        }
+    ]
+}
+```
 
 
 
@@ -569,10 +602,228 @@ http://127.0.0.1:8090/call/sdk/record/bargraph/total
 
 统计最近30天的合约量--返回横纵坐标
 
+请求参数：
 
+```json
+{
+	"size":5
+}
+```
+
+请求路径：http://127.0.0.1:8110/contract/organization/distribution
+
+/system/contract/organization/distribution
+
+请求类型：POST
+
+返回参数：
+
+```json
+{
+    "returnCode": "0000",
+    "returnMsg": "Success",
+    "nonceStr": "90e7bd9fdafc4183bc269428bca7d745",
+    "success": true,
+    "data": [
+        {
+            "organizationName": "QATB",
+            "count": 6
+        },
+        {
+            "organizationName": "QA",
+            "count": 4
+        }
+    ]
+}
+```
+
+#### 3.4 分页查询合约表
 
 合约上传列表：分页查询合约表（SYSTEM_CONTRACT），入参有时间区间
-合约升级列表：分页查询合约历史表（SYSTEM_CONTRACT_HISTORY），查询结果CONTRACT_ID唯
+
+请求参数：
+
+```json
+{
+	"startTime":"20190826144804",
+	"endTime":"20190926144804",
+	"pageSize":10,
+	"pageNum":1
+}
+```
+
+请求路径：http://127.0.0.1:8110/contract/page
+
+/system/contract/page
+
+请求类型：POST
+
+返回参数：
+
+```json
+{
+    "returnCode": "0000",
+    "returnMsg": "Success",
+    "nonceStr": "17f42e6d013d43da94e4be89e6e8b8c8",
+    "success": true,
+    "data": {
+        "total": 7,
+        "pageCount": 1,
+        "pageNum": 1,
+        "pageSize": 10,
+        "datas": [
+            {
+                "id": "624999693424078848",
+                "number": "624999693424078849",
+                "projectId": "618035918208512000",
+                "createTime": "2019/09/21",
+                "state": "0",
+                "serverVersion": null,
+                "fileBase64": null,
+                "description": "import ",
+                "name": "import"
+            },
+            {
+                "id": "624996580000608256",
+                "number": "624996580000608257",
+                "projectId": "618035918208512000",
+                "createTime": "2019/09/21",
+                "state": "0",
+                "serverVersion": "1.3",
+                "fileBase64": null,
+                "description": "package main",
+                "name": "packagemain"
+            },
+            {
+                "id": "624985102635843584",
+                "number": "624985102635843585",
+                "projectId": "618035918208512000",
+                "createTime": "2019/09/21",
+                "state": "0",
+                "serverVersion": "11",
+                "fileBase64": null,
+                "description": "11",
+                "name": "assad"
+            },
+            {
+                "id": "619501302212210688",
+                "number": "619501302212210689",
+                "projectId": "619230915440160768",
+                "createTime": "2019/09/06",
+                "state": "0",
+                "serverVersion": "1.2",
+                "fileBase64": null,
+                "description": "TEST",
+                "name": "material"
+            },
+            {
+                "id": "619232382746112000",
+                "number": "619232382746112001",
+                "projectId": "619230915440160768",
+                "createTime": "2019/09/05",
+                "state": "0",
+                "serverVersion": "1.1",
+                "fileBase64": null,
+                "description": "TEST",
+                "name": "Testf"
+            },
+            {
+                "id": "619181767173091328",
+                "number": "619181767173091329",
+                "projectId": "619230915440160768",
+                "createTime": "2019/09/05",
+                "state": "0",
+                "serverVersion": "1.3",
+                "fileBase64": null,
+                "description": "Test",
+                "name": "Test"
+            },
+            {
+                "id": "619136508674191360",
+                "number": "619136508674191361",
+                "projectId": "619230915440160768",
+                "createTime": "2019/09/05",
+                "state": "0",
+                "serverVersion": "1.1",
+                "fileBase64": null,
+                "description": "QA",
+                "name": "QATB"
+            }
+        ]
+    }
+}
+```
+
+
+
+#### 3.5 分页查询合约历史表
+
+合约升级列表：分页查询合约历史表（SYSTEM_CONTRACT_HISTORY），查询结果CONTRACT_ID唯一
+
+请求参数：
+
+```json
+{
+	"startTime":"20190826144804",
+	"endTime":"20190926144804",
+	"pageSize":10,
+	"pageNum":1
+}
+```
+
+请求路径：http://127.0.0.1:8110/contract/history/page
+
+/system/contract/history/page
+
+请求类型：POST
+
+返回参数：
+
+```json
+{
+    "returnCode": "0000",
+    "returnMsg": "Success",
+    "nonceStr": "6af9c7eddd2b45a3b35136d1096b6c16",
+    "success": true,
+    "data": {
+        "total": 3,
+        "pageCount": 1,
+        "pageNum": 1,
+        "pageSize": 10,
+        "datas": [
+            {
+                "id": "624998457849229312",
+                "contractId": "624996580000608256",
+                "projectId": "618035918208512000",
+                "cteateTime": null,
+                "installVersion": "1.1",
+                "serverVersion": "1.1",
+                "uniqueId": "f65f90e4c4ad425ab75f9812002760e6"
+            },
+            {
+                "id": "624927740189282304",
+                "contractId": "619501302212210688",
+                "projectId": "618035918208512000",
+                "cteateTime": null,
+                "installVersion": "1.0",
+                "serverVersion": "1.0",
+                "uniqueId": "02aa80bb2c6d41edba2114ca4c87b926"
+            },
+            {
+                "id": "001",
+                "contractId": "001",
+                "projectId": "001",
+                "cteateTime": null,
+                "installVersion": null,
+                "serverVersion": "1.0",
+                "uniqueId": "001"
+            }
+        ]
+    }
+}
+```
+
+
 
 ### 4、业务统计
 
