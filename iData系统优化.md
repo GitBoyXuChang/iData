@@ -833,7 +833,101 @@ x-userid：613463581383565312（用户id）
 
 日志查询接口时间精确到秒
 
-9、
+### 9、用户（应用）新增列表
+
+/system/project/page-overview 接口增加部门作为条件，返回结果增加联系人和联系方式
+
+- 接口描述
+
+  /system/project/page-overview 接口增加部门作为条件，返回结果增加联系人和联系方式
+
+- 接口路径
+
+  /system/project/page-overview
+
+- 接口入参
+
+  ```json
+  {
+  	"name":"",
+  	"organizationId":"619227683267555328",
+  	"pageNum":1,
+  	"pageSize":10,
+  	"startTime":"",
+  	"endTime":""
+  }
+  ```
+
+  
+
+- 接口类型
+
+  POST
+
+- 接口返回
+
+  ```json
+  {
+      "returnCode": "0000",
+      "returnMsg": "Success",
+      "nonceStr": "a52f6309e590418c9db0cbf57c2b8d66",
+      "success": true,
+      "data": {
+          "total": 4,
+          "pageCount": 1,
+          "pageNum": 1,
+          "pageSize": 10,
+          "datas": [
+              {
+                  "id": "619231297407037440",
+                  "number": "619231297407037440",
+                  "name": "TEST",
+                  "description": "TEST",
+                  "organizationName": "QATB",
+                  "sum": 4,
+                  "createTime": "2019-09-12 15:31:54",
+                  "contact": "联系人",
+                  "contactPhone": "13800138001"
+              },
+              {
+                  "id": "619230915440160768",
+                  "number": "619230915440160768",
+                  "name": "QATB",
+                  "description": "QATB",
+                  "organizationName": "QATB",
+                  "sum": 3,
+                  "createTime": "2019-09-12 15:31:51",
+                  "contact": "联系人系",
+                  "contactPhone": "13800138003"
+              },
+              {
+                  "id": "618035918208512000",
+                  "number": "618035918208512000",
+                  "name": "QA",
+                  "description": "QA",
+                  "organizationName": "QATB",
+                  "sum": 2,
+                  "createTime": "2019-09-02 15:31:45",
+                  "contact": "联系人",
+                  "contactPhone": "13800138000"
+              },
+              {
+                  "id": "619181279165820928",
+                  "number": "619181279165820928",
+                  "name": "和谐共享社区",
+                  "description": "和谐共享社区",
+                  "organizationName": "QATB",
+                  "sum": 1,
+                  "createTime": "2019-08-31 15:31:49",
+                  "contact": "李延辉",
+                  "contactPhone": "18789472475"
+              }
+          ]
+      }
+  }
+  ```
+
+  
 
 10、
 
