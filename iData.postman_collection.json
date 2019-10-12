@@ -1,0 +1,2403 @@
+{
+	"info": {
+		"_postman_id": "dd766742-b0ca-433b-a1b6-8654ce2bec8d",
+		"name": "iData",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "模板",
+			"item": [
+				{
+					"name": "添加模板",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-userid",
+								"value": "613463581383565312",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"templatTestAbcsnewa\",\r\n  \"description\": \"template1 desc\",\r\n  \"fileBase64\": \"LyoKQ29weXJpZ2h0IElCTSBDb3JwLiAyMDE2IEFsbCBSaWdodHMgUmVzZXJ2ZWQuCgpMaWNlbnNlZCB1bmRlciB0aGUgQXBhY2hlIExpY2Vuc2UsIFZlcnNpb24gMi4wICh0aGUgIkxpY2Vuc2UiKTsKeW91IG1heSBub3QgdXNlIHRoaXMgZmlsZSBleGNlcHQgaW4gY29tcGxpYW5jZSB3aXRoIHRoZSBMaWNlbnNlLgpZb3UgbWF5IG9idGFpbiBhIGNvcHkgb2YgdGhlIExpY2Vuc2UgYXQKCgkJIGh0dHA6Ly93d3cuYXBhY2hlLm9yZy9saWNlbnNlcy9MSUNFTlNFLTIuMAoKVW5sZXNzIHJlcXVpcmVkIGJ5IGFwcGxpY2FibGUgbGF3IG9yIGFncmVlZCB0byBpbiB3cml0aW5nLCBzb2Z0d2FyZQpkaXN0cmlidXRlZCB1bmRlciB0aGUgTGljZW5zZSBpcyBkaXN0cmlidXRlZCBvbiBhbiAiQVMgSVMiIEJBU0lTLApXSVRIT1VUIFdBUlJBTlRJRVMgT1IgQ09ORElUSU9OUyBPRiBBTlkgS0lORCwgZWl0aGVyIGV4cHJlc3Mgb3IgaW1wbGllZC4KU2VlIHRoZSBMaWNlbnNlIGZvciB0aGUgc3BlY2lmaWMgbGFuZ3VhZ2UgZ292ZXJuaW5nIHBlcm1pc3Npb25zIGFuZApsaW1pdGF0aW9ucyB1bmRlciB0aGUgTGljZW5zZS4KKi8KCnBhY2thZ2UgbWFpbgoKLy9XQVJOSU5HIC0gdGhpcyBjaGFpbmNvZGUncyBJRCBpcyBoYXJkLWNvZGVkIGluIGNoYWluY29kZV9leGFtcGxlMDQgdG8gaWxsdXN0cmF0ZSBvbmUgd2F5IG9mCi8vY2FsbGluZyBjaGFpbmNvZGUgZnJvbSBhIGNoYWluY29kZS4gSWYgdGhpcyBleGFtcGxlIGlzIG1vZGlmaWVkLCBjaGFpbmNvZGVfZXhhbXBsZTA0LmdvIGhhcwovL3RvIGJlIG1vZGlmaWVkIGFzIHdlbGwgd2l0aCB0aGUgbmV3IElEIG9mIGNoYWluY29kZV9leGFtcGxlMDIuCi8vY2hhaW5jb2RlX2V4YW1wbGUwNSBzaG93J3MgaG93IGNoYWluY29kZSBJRCBjYW4gYmUgcGFzc2VkIGluIGFzIGEgcGFyYW1ldGVyIGluc3RlYWQgb2YKLy9oYXJkLWNvZGluZy4KCmltcG9ydCAoCgkiZm10IgoJInN0cmNvbnYiCgoJImdpdGh1Yi5jb20vaHlwZXJsZWRnZXIvZmFicmljL2NvcmUvY2hhaW5jb2RlL3NoaW0iCglwYiAiZ2l0aHViLmNvbS9oeXBlcmxlZGdlci9mYWJyaWMvcHJvdG9zL3BlZXIiCikKCi8vIFNpbXBsZUNoYWluY29kZSBleGFtcGxlIHNpbXBsZSBDaGFpbmNvZGUgaW1wbGVtZW50YXRpb24KdHlwZSBTaW1wbGVDaGFpbmNvZGUgc3RydWN0IHsKfQoKZnVuYyAodCAqU2ltcGxlQ2hhaW5jb2RlKSBJbml0KHN0dWIgc2hpbS5DaGFpbmNvZGVTdHViSW50ZXJmYWNlKSBwYi5SZXNwb25zZSB7CglmbXQuUHJpbnRsbigiZXgwMiBJbml0IikKCV8sIGFyZ3MgOj0gc3R1Yi5HZXRGdW5jdGlvbkFuZFBhcmFtZXRlcnMoKQoJdmFyIEEsIEIgc3RyaW5nICAgIC8vIEVudGl0aWVzCgl2YXIgQXZhbCwgQnZhbCBpbnQgLy8gQXNzZXQgaG9sZGluZ3MKCXZhciBlcnIgZXJyb3IKCglpZiBsZW4oYXJncykgIT0gNCB7CgkJcmV0dXJuIHNoaW0uRXJyb3IoIkluY29ycmVjdCBudW1iZXIgb2YgYXJndW1lbnRzLiBFeHBlY3RpbmcgNCIpCgl9CgoJLy8gSW5pdGlhbGl6ZSB0aGUgY2hhaW5jb2RlCglBID0gYXJnc1swXQoJQXZhbCwgZXJyID0gc3RyY29udi5BdG9pKGFyZ3NbMV0pCglpZiBlcnIgIT0gbmlsIHsKCQlyZXR1cm4gc2hpbS5FcnJvcigiRXhwZWN0aW5nIGludGVnZXIgdmFsdWUgZm9yIGFzc2V0IGhvbGRpbmciKQoJfQoJQiA9IGFyZ3NbMl0KCUJ2YWwsIGVyciA9IHN0cmNvbnYuQXRvaShhcmdzWzNdKQoJaWYgZXJyICE9IG5pbCB7CgkJcmV0dXJuIHNoaW0uRXJyb3IoIkV4cGVjdGluZyBpbnRlZ2VyIHZhbHVlIGZvciBhc3NldCBob2xkaW5nIikKCX0KCWZtdC5QcmludGYoIkF2YWwgPSAlZCwgQnZhbCA9ICVkXG4iLCBBdmFsLCBCdmFsKQoKCS8vIFdyaXRlIHRoZSBzdGF0ZSB0byB0aGUgbGVkZ2VyCgllcnIgPSBzdHViLlB1dFN0YXRlKEEsIFtdYnl0ZShzdHJjb252Lkl0b2EoQXZhbCkpKQoJaWYgZXJyICE9IG5pbCB7CgkJcmV0dXJuIHNoaW0uRXJyb3IoZXJyLkVycm9yKCkpCgl9CgoJZXJyID0gc3R1Yi5QdXRTdGF0ZShCLCBbXWJ5dGUoc3RyY29udi5JdG9hKEJ2YWwpKSkKCWlmIGVyciAhPSBuaWwgewoJCXJldHVybiBzaGltLkVycm9yKGVyci5FcnJvcigpKQoJfQoKCXJldHVybiBzaGltLlN1Y2Nlc3MobmlsKQp9CgpmdW5jICh0ICpTaW1wbGVDaGFpbmNvZGUpIEludm9rZShzdHViIHNoaW0uQ2hhaW5jb2RlU3R1YkludGVyZmFjZSkgcGIuUmVzcG9uc2UgewoJZm10LlByaW50bG4oImV4MDIgSW52b2tlIikKCWZ1bmN0aW9uLCBhcmdzIDo9IHN0dWIuR2V0RnVuY3Rpb25BbmRQYXJhbWV0ZXJzKCkKCWlmIGZ1bmN0aW9uID09ICJpbnZva2UiIHsKCQkvLyBNYWtlIHBheW1lbnQgb2YgWCB1bml0cyBmcm9tIEEgdG8gQgoJCXJldHVybiB0Lmludm9rZShzdHViLCBhcmdzKQoJfSBlbHNlIGlmIGZ1bmN0aW9uID09ICJkZWxldGUiIHsKCQkvLyBEZWxldGVzIGFuIGVudGl0eSBmcm9tIGl0cyBzdGF0ZQoJCXJldHVybiB0LmRlbGV0ZShzdHViLCBhcmdzKQoJfSBlbHNlIGlmIGZ1bmN0aW9uID09ICJxdWVyeSIgewoJCS8vIHRoZSBvbGQgIlF1ZXJ5IiBpcyBub3cgaW1wbGVtdG5lZCBpbiBpbnZva2UKCQlyZXR1cm4gdC5xdWVyeShzdHViLCBhcmdzKQoJfQoKCXJldHVybiBzaGltLkVycm9yKCJJbnZhbGlkIGludm9rZSBmdW5jdGlvbiBuYW1lLiBFeHBlY3RpbmcgXCJpbnZva2VcIiBcImRlbGV0ZVwiIFwicXVlcnlcIiIpCn0KCi8vIFRyYW5zYWN0aW9uIG1ha2VzIHBheW1lbnQgb2YgWCB1bml0cyBmcm9tIEEgdG8gQgpmdW5jICh0ICpTaW1wbGVDaGFpbmNvZGUpIGludm9rZShzdHViIHNoaW0uQ2hhaW5jb2RlU3R1YkludGVyZmFjZSwgYXJncyBbXXN0cmluZykgcGIuUmVzcG9uc2UgewoJdmFyIEEsIEIgc3RyaW5nICAgIC8vIEVudGl0aWVzCgl2YXIgQXZhbCwgQnZhbCBpbnQgLy8gQXNzZXQgaG9sZGluZ3MKCXZhciBYIGludCAgICAgICAgICAvLyBUcmFuc2FjdGlvbiB2YWx1ZQoJdmFyIGVyciBlcnJvcgoKCWlmIGxlbihhcmdzKSAhPSAzIHsKCQlyZXR1cm4gc2hpbS5FcnJvcigiSW5jb3JyZWN0IG51bWJlciBvZiBhcmd1bWVudHMuIEV4cGVjdGluZyAzIikKCX0KCglBID0gYXJnc1swXQoJQiA9IGFyZ3NbMV0KCgkvLyBHZXQgdGhlIHN0YXRlIGZyb20gdGhlIGxlZGdlcgoJLy8gVE9ETzogd2lsbCBiZSBuaWNlIHRvIGhhdmUgYSBHZXRBbGxTdGF0ZSBjYWxsIHRvIGxlZGdlcgoJQXZhbGJ5dGVzLCBlcnIgOj0gc3R1Yi5HZXRTdGF0ZShBKQoJaWYgZXJyICE9IG5pbCB7CgkJcmV0dXJuIHNoaW0uRXJyb3IoIkZhaWxlZCB0byBnZXQgc3RhdGUiKQoJfQoJaWYgQXZhbGJ5dGVzID09IG5pbCB7CgkJcmV0dXJuIHNoaW0uRXJyb3IoIkVudGl0eSBub3QgZm91bmQiKQoJfQoJQXZhbCwgXyA9IHN0cmNvbnYuQXRvaShzdHJpbmcoQXZhbGJ5dGVzKSkKCglCdmFsYnl0ZXMsIGVyciA6PSBzdHViLkdldFN0YXRlKEIpCglpZiBlcnIgIT0gbmlsIHsKCQlyZXR1cm4gc2hpbS5FcnJvcigiRmFpbGVkIHRvIGdldCBzdGF0ZSIpCgl9CglpZiBCdmFsYnl0ZXMgPT0gbmlsIHsKCQlyZXR1cm4gc2hpbS5FcnJvcigiRW50aXR5IG5vdCBmb3VuZCIpCgl9CglCdmFsLCBfID0gc3RyY29udi5BdG9pKHN0cmluZyhCdmFsYnl0ZXMpKQoKCS8vIFBlcmZvcm0gdGhlIGV4ZWN1dGlvbgoJWCwgZXJyID0gc3RyY29udi5BdG9pKGFyZ3NbMl0pCglpZiBlcnIgIT0gbmlsIHsKCQlyZXR1cm4gc2hpbS5FcnJvcigiSW52YWxpZCB0cmFuc2FjdGlvbiBhbW91bnQsIGV4cGVjdGluZyBhIGludGVnZXIgdmFsdWUiKQoJfQoJQXZhbCA9IEF2YWwgLSBYCglCdmFsID0gQnZhbCArIFgKCWZtdC5QcmludGYoIkF2YWwgPSAlZCwgQnZhbCA9ICVkXG4iLCBBdmFsLCBCdmFsKQoKCS8vIFdyaXRlIHRoZSBzdGF0ZSBiYWNrIHRvIHRoZSBsZWRnZXIKCWVyciA9IHN0dWIuUHV0U3RhdGUoQSwgW11ieXRlKHN0cmNvbnYuSXRvYShBdmFsKSkpCglpZiBlcnIgIT0gbmlsIHsKCQlyZXR1cm4gc2hpbS5FcnJvcihlcnIuRXJyb3IoKSkKCX0KCgllcnIgPSBzdHViLlB1dFN0YXRlKEIsIFtdYnl0ZShzdHJjb252Lkl0b2EoQnZhbCkpKQoJaWYgZXJyICE9IG5pbCB7CgkJcmV0dXJuIHNoaW0uRXJyb3IoZXJyLkVycm9yKCkpCgl9CgoJcmV0dXJuIHNoaW0uU3VjY2VzcyhuaWwpCn0KCi8vIERlbGV0ZXMgYW4gZW50aXR5IGZyb20gc3RhdGUKZnVuYyAodCAqU2ltcGxlQ2hhaW5jb2RlKSBkZWxldGUoc3R1YiBzaGltLkNoYWluY29kZVN0dWJJbnRlcmZhY2UsIGFyZ3MgW11zdHJpbmcpIHBiLlJlc3BvbnNlIHsKCWlmIGxlbihhcmdzKSAhPSAxIHsKCQlyZXR1cm4gc2hpbS5FcnJvcigiSW5jb3JyZWN0IG51bWJlciBvZiBhcmd1bWVudHMuIEV4cGVjdGluZyAxIikKCX0KCglBIDo9IGFyZ3NbMF0KCgkvLyBEZWxldGUgdGhlIGtleSBmcm9tIHRoZSBzdGF0ZSBpbiBsZWRnZXIKCWVyciA6PSBzdHViLkRlbFN0YXRlKEEpCglpZiBlcnIgIT0gbmlsIHsKCQlyZXR1cm4gc2hpbS5FcnJvcigiRmFpbGVkIHRvIGRlbGV0ZSBzdGF0ZSIpCgl9CgoJcmV0dXJuIHNoaW0uU3VjY2VzcyhuaWwpCn0KCi8vIHF1ZXJ5IGNhbGxiYWNrIHJlcHJlc2VudGluZyB0aGUgcXVlcnkgb2YgYSBjaGFpbmNvZGUKZnVuYyAodCAqU2ltcGxlQ2hhaW5jb2RlKSBxdWVyeShzdHViIHNoaW0uQ2hhaW5jb2RlU3R1YkludGVyZmFjZSwgYXJncyBbXXN0cmluZykgcGIuUmVzcG9uc2UgewoJdmFyIEEgc3RyaW5nIC8vIEVudGl0aWVzCgl2YXIgZXJyIGVycm9yCgoJaWYgbGVuKGFyZ3MpICE9IDEgewoJCXJldHVybiBzaGltLkVycm9yKCJJbmNvcnJlY3QgbnVtYmVyIG9mIGFyZ3VtZW50cy4gRXhwZWN0aW5nIG5hbWUgb2YgdGhlIHBlcnNvbiB0byBxdWVyeSIpCgl9CgoJQSA9IGFyZ3NbMF0KCgkvLyBHZXQgdGhlIHN0YXRlIGZyb20gdGhlIGxlZGdlcgoJQXZhbGJ5dGVzLCBlcnIgOj0gc3R1Yi5HZXRTdGF0ZShBKQoJaWYgZXJyICE9IG5pbCB7CgkJanNvblJlc3AgOj0gIntcIkVycm9yXCI6XCJGYWlsZWQgdG8gZ2V0IHN0YXRlIGZvciAiICsgQSArICJcIn0iCgkJcmV0dXJuIHNoaW0uRXJyb3IoanNvblJlc3ApCgl9CgoJaWYgQXZhbGJ5dGVzID09IG5pbCB7CgkJanNvblJlc3AgOj0gIntcIkVycm9yXCI6XCJOaWwgYW1vdW50IGZvciAiICsgQSArICJcIn0iCgkJcmV0dXJuIHNoaW0uRXJyb3IoanNvblJlc3ApCgl9CgoJanNvblJlc3AgOj0gIntcIk5hbWVcIjpcIiIgKyBBICsgIlwiLFwiQW1vdW50XCI6XCIiICsgc3RyaW5nKEF2YWxieXRlcykgKyAiXCJ9IgoJZm10LlByaW50ZigiUXVlcnkgUmVzcG9uc2U6JXNcbiIsIGpzb25SZXNwKQoJcmV0dXJuIHNoaW0uU3VjY2VzcyhBdmFsYnl0ZXMpCn0KCmZ1bmMgbWFpbigpIHsKCWVyciA6PSBzaGltLlN0YXJ0KG5ldyhTaW1wbGVDaGFpbmNvZGUpKQoJaWYgZXJyICE9IG5pbCB7CgkJZm10LlByaW50ZigiRXJyb3Igc3RhcnRpbmcgU2ltcGxlIGNoYWluY29kZTogJXMiLCBlcnIpCgl9Cn0K\",\r\n\t\"type\":\"user\",\r\n\t\"abbreviation\":\"中文名\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/template/insert",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"template",
+								"insert"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						},
+						"description": "模板添加"
+					},
+					"response": []
+				},
+				{
+					"name": "修改模板",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"testC\",\r\n  \"id\":\"614478426123948032\",\r\n  \"description\": \"testC desc\",\r\n  \"fileBase64\": \"LyoKQ29weXJpZ2h0IElCTSBDb3JwLiAyMDE2IEFsbCBSaWdodHMgUmVzZXJ2ZWQuCgpMaWNlbnNlZCB1bmRlciB0aGUgQXBhY2hlIExpY2Vuc2UsIFZlcnNpb24gMi4wICh0aGUgIkxpY2Vuc2UiKTsKeW91IG1heSBub3QgdXNlIHRoaXMgZmlsZSBleGNlcHQgaW4gY29tcGxpYW5jZSB3aXRoIHRoZSBMaWNlbnNlLgpZb3UgbWF5IG9idGFpbiBhIGNvcHkgb2YgdGhlIExpY2Vuc2UgYXQKCgkJIGh0dHA6Ly93d3cuYXBhY2hlLm9yZy9saWNlbnNlcy9MSUNFTlNFLTIuMAoKVW5sZXNzIHJlcXVpcmVkIGJ5IGFwcGxpY2FibGUgbGF3IG9yIGFncmVlZCB0byBpbiB3cml0aW5nLCBzb2Z0d2FyZQpkaXN0cmlidXRlZCB1bmRlciB0aGUgTGljZW5zZSBpcyBkaXN0cmlidXRlZCBvbiBhbiAiQVMgSVMiIEJBU0lTLApXSVRIT1VUIFdBUlJBTlRJRVMgT1IgQ09ORElUSU9OUyBPRiBBTlkgS0lORCwgZWl0aGVyIGV4cHJlc3Mgb3IgaW1wbGllZC4KU2VlIHRoZSBMaWNlbnNlIGZvciB0aGUgc3BlY2lmaWMgbGFuZ3VhZ2UgZ292ZXJuaW5nIHBlcm1pc3Npb25zIGFuZApsaW1pdGF0aW9ucyB1bmRlciB0aGUgTGljZW5zZS4KKi8KCnBhY2thZ2UgbWFpbgoKLy9XQVJOSU5HIC0gdGhpcyBjaGFpbmNvZGUncyBJRCBpcyBoYXJkLWNvZGVkIGluIGNoYWluY29kZV9leGFtcGxlMDQgdG8gaWxsdXN0cmF0ZSBvbmUgd2F5IG9mCi8vY2FsbGluZyBjaGFpbmNvZGUgZnJvbSBhIGNoYWluY29kZS4gSWYgdGhpcyBleGFtcGxlIGlzIG1vZGlmaWVkLCBjaGFpbmNvZGVfZXhhbXBsZTA0LmdvIGhhcwovL3RvIGJlIG1vZGlmaWVkIGFzIHdlbGwgd2l0aCB0aGUgbmV3IElEIG9mIGNoYWluY29kZV9leGFtcGxlMDIuCi8vY2hhaW5jb2RlX2V4YW1wbGUwNSBzaG93J3MgaG93IGNoYWluY29kZSBJRCBjYW4gYmUgcGFzc2VkIGluIGFzIGEgcGFyYW1ldGVyIGluc3RlYWQgb2YKLy9oYXJkLWNvZGluZy4KCmltcG9ydCAoCgkiZm10IgoJInN0cmNvbnYiCgoJImdpdGh1Yi5jb20vaHlwZXJsZWRnZXIvZmFicmljL2NvcmUvY2hhaW5jb2RlL3NoaW0iCglwYiAiZ2l0aHViLmNvbS9oeXBlcmxlZGdlci9mYWJyaWMvcHJvdG9zL3BlZXIiCikKCi8vIFNpbXBsZUNoYWluY29kZSBleGFtcGxlIHNpbXBsZSBDaGFpbmNvZGUgaW1wbGVtZW50YXRpb24KdHlwZSBTaW1wbGVDaGFpbmNvZGUgc3RydWN0IHsKfQoKZnVuYyAodCAqU2ltcGxlQ2hhaW5jb2RlKSBJbml0KHN0dWIgc2hpbS5DaGFpbmNvZGVTdHViSW50ZXJmYWNlKSBwYi5SZXNwb25zZSB7CglmbXQuUHJpbnRsbigiZXgwMiBJbml0IikKCV8sIGFyZ3MgOj0gc3R1Yi5HZXRGdW5jdGlvbkFuZFBhcmFtZXRlcnMoKQoJdmFyIEEsIEIgc3RyaW5nICAgIC8vIEVudGl0aWVzCgl2YXIgQXZhbCwgQnZhbCBpbnQgLy8gQXNzZXQgaG9sZGluZ3MKCXZhciBlcnIgZXJyb3IKCglpZiBsZW4oYXJncykgIT0gNCB7CgkJcmV0dXJuIHNoaW0uRXJyb3IoIkluY29ycmVjdCBudW1iZXIgb2YgYXJndW1lbnRzLiBFeHBlY3RpbmcgNCIpCgl9CgoJLy8gSW5pdGlhbGl6ZSB0aGUgY2hhaW5jb2RlCglBID0gYXJnc1swXQoJQXZhbCwgZXJyID0gc3RyY29udi5BdG9pKGFyZ3NbMV0pCglpZiBlcnIgIT0gbmlsIHsKCQlyZXR1cm4gc2hpbS5FcnJvcigiRXhwZWN0aW5nIGludGVnZXIgdmFsdWUgZm9yIGFzc2V0IGhvbGRpbmciKQoJfQoJQiA9IGFyZ3NbMl0KCUJ2YWwsIGVyciA9IHN0cmNvbnYuQXRvaShhcmdzWzNdKQoJaWYgZXJyICE9IG5pbCB7CgkJcmV0dXJuIHNoaW0uRXJyb3IoIkV4cGVjdGluZyBpbnRlZ2VyIHZhbHVlIGZvciBhc3NldCBob2xkaW5nIikKCX0KCWZtdC5QcmludGYoIkF2YWwgPSAlZCwgQnZhbCA9ICVkXG4iLCBBdmFsLCBCdmFsKQoKCS8vIFdyaXRlIHRoZSBzdGF0ZSB0byB0aGUgbGVkZ2VyCgllcnIgPSBzdHViLlB1dFN0YXRlKEEsIFtdYnl0ZShzdHJjb252Lkl0b2EoQXZhbCkpKQoJaWYgZXJyICE9IG5pbCB7CgkJcmV0dXJuIHNoaW0uRXJyb3IoZXJyLkVycm9yKCkpCgl9CgoJZXJyID0gc3R1Yi5QdXRTdGF0ZShCLCBbXWJ5dGUoc3RyY29udi5JdG9hKEJ2YWwpKSkKCWlmIGVyciAhPSBuaWwgewoJCXJldHVybiBzaGltLkVycm9yKGVyci5FcnJvcigpKQoJfQoKCXJldHVybiBzaGltLlN1Y2Nlc3MobmlsKQp9CgpmdW5jICh0ICpTaW1wbGVDaGFpbmNvZGUpIEludm9rZShzdHViIHNoaW0uQ2hhaW5jb2RlU3R1YkludGVyZmFjZSkgcGIuUmVzcG9uc2UgewoJZm10LlByaW50bG4oImV4MDIgSW52b2tlIikKCWZ1bmN0aW9uLCBhcmdzIDo9IHN0dWIuR2V0RnVuY3Rpb25BbmRQYXJhbWV0ZXJzKCkKCWlmIGZ1bmN0aW9uID09ICJpbnZva2UiIHsKCQkvLyBNYWtlIHBheW1lbnQgb2YgWCB1bml0cyBmcm9tIEEgdG8gQgoJCXJldHVybiB0Lmludm9rZShzdHViLCBhcmdzKQoJfSBlbHNlIGlmIGZ1bmN0aW9uID09ICJkZWxldGUiIHsKCQkvLyBEZWxldGVzIGFuIGVudGl0eSBmcm9tIGl0cyBzdGF0ZQoJCXJldHVybiB0LmRlbGV0ZShzdHViLCBhcmdzKQoJfSBlbHNlIGlmIGZ1bmN0aW9uID09ICJxdWVyeSIgewoJCS8vIHRoZSBvbGQgIlF1ZXJ5IiBpcyBub3cgaW1wbGVtdG5lZCBpbiBpbnZva2UKCQlyZXR1cm4gdC5xdWVyeShzdHViLCBhcmdzKQoJfQoKCXJldHVybiBzaGltLkVycm9yKCJJbnZhbGlkIGludm9rZSBmdW5jdGlvbiBuYW1lLiBFeHBlY3RpbmcgXCJpbnZva2VcIiBcImRlbGV0ZVwiIFwicXVlcnlcIiIpCn0KCi8vIFRyYW5zYWN0aW9uIG1ha2VzIHBheW1lbnQgb2YgWCB1bml0cyBmcm9tIEEgdG8gQgpmdW5jICh0ICpTaW1wbGVDaGFpbmNvZGUpIGludm9rZShzdHViIHNoaW0uQ2hhaW5jb2RlU3R1YkludGVyZmFjZSwgYXJncyBbXXN0cmluZykgcGIuUmVzcG9uc2UgewoJdmFyIEEsIEIgc3RyaW5nICAgIC8vIEVudGl0aWVzCgl2YXIgQXZhbCwgQnZhbCBpbnQgLy8gQXNzZXQgaG9sZGluZ3MKCXZhciBYIGludCAgICAgICAgICAvLyBUcmFuc2FjdGlvbiB2YWx1ZQoJdmFyIGVyciBlcnJvcgoKCWlmIGxlbihhcmdzKSAhPSAzIHsKCQlyZXR1cm4gc2hpbS5FcnJvcigiSW5jb3JyZWN0IG51bWJlciBvZiBhcmd1bWVudHMuIEV4cGVjdGluZyAzIikKCX0KCglBID0gYXJnc1swXQoJQiA9IGFyZ3NbMV0KCgkvLyBHZXQgdGhlIHN0YXRlIGZyb20gdGhlIGxlZGdlcgoJLy8gVE9ETzogd2lsbCBiZSBuaWNlIHRvIGhhdmUgYSBHZXRBbGxTdGF0ZSBjYWxsIHRvIGxlZGdlcgoJQXZhbGJ5dGVzLCBlcnIgOj0gc3R1Yi5HZXRTdGF0ZShBKQoJaWYgZXJyICE9IG5pbCB7CgkJcmV0dXJuIHNoaW0uRXJyb3IoIkZhaWxlZCB0byBnZXQgc3RhdGUiKQoJfQoJaWYgQXZhbGJ5dGVzID09IG5pbCB7CgkJcmV0dXJuIHNoaW0uRXJyb3IoIkVudGl0eSBub3QgZm91bmQiKQoJfQoJQXZhbCwgXyA9IHN0cmNvbnYuQXRvaShzdHJpbmcoQXZhbGJ5dGVzKSkKCglCdmFsYnl0ZXMsIGVyciA6PSBzdHViLkdldFN0YXRlKEIpCglpZiBlcnIgIT0gbmlsIHsKCQlyZXR1cm4gc2hpbS5FcnJvcigiRmFpbGVkIHRvIGdldCBzdGF0ZSIpCgl9CglpZiBCdmFsYnl0ZXMgPT0gbmlsIHsKCQlyZXR1cm4gc2hpbS5FcnJvcigiRW50aXR5IG5vdCBmb3VuZCIpCgl9CglCdmFsLCBfID0gc3RyY29udi5BdG9pKHN0cmluZyhCdmFsYnl0ZXMpKQoKCS8vIFBlcmZvcm0gdGhlIGV4ZWN1dGlvbgoJWCwgZXJyID0gc3RyY29udi5BdG9pKGFyZ3NbMl0pCglpZiBlcnIgIT0gbmlsIHsKCQlyZXR1cm4gc2hpbS5FcnJvcigiSW52YWxpZCB0cmFuc2FjdGlvbiBhbW91bnQsIGV4cGVjdGluZyBhIGludGVnZXIgdmFsdWUiKQoJfQoJQXZhbCA9IEF2YWwgLSBYCglCdmFsID0gQnZhbCArIFgKCWZtdC5QcmludGYoIkF2YWwgPSAlZCwgQnZhbCA9ICVkXG4iLCBBdmFsLCBCdmFsKQoKCS8vIFdyaXRlIHRoZSBzdGF0ZSBiYWNrIHRvIHRoZSBsZWRnZXIKCWVyciA9IHN0dWIuUHV0U3RhdGUoQSwgW11ieXRlKHN0cmNvbnYuSXRvYShBdmFsKSkpCglpZiBlcnIgIT0gbmlsIHsKCQlyZXR1cm4gc2hpbS5FcnJvcihlcnIuRXJyb3IoKSkKCX0KCgllcnIgPSBzdHViLlB1dFN0YXRlKEIsIFtdYnl0ZShzdHJjb252Lkl0b2EoQnZhbCkpKQoJaWYgZXJyICE9IG5pbCB7CgkJcmV0dXJuIHNoaW0uRXJyb3IoZXJyLkVycm9yKCkpCgl9CgoJcmV0dXJuIHNoaW0uU3VjY2VzcyhuaWwpCn0KCi8vIERlbGV0ZXMgYW4gZW50aXR5IGZyb20gc3RhdGUKZnVuYyAodCAqU2ltcGxlQ2hhaW5jb2RlKSBkZWxldGUoc3R1YiBzaGltLkNoYWluY29kZVN0dWJJbnRlcmZhY2UsIGFyZ3MgW11zdHJpbmcpIHBiLlJlc3BvbnNlIHsKCWlmIGxlbihhcmdzKSAhPSAxIHsKCQlyZXR1cm4gc2hpbS5FcnJvcigiSW5jb3JyZWN0IG51bWJlciBvZiBhcmd1bWVudHMuIEV4cGVjdGluZyAxIikKCX0KCglBIDo9IGFyZ3NbMF0KCgkvLyBEZWxldGUgdGhlIGtleSBmcm9tIHRoZSBzdGF0ZSBpbiBsZWRnZXIKCWVyciA6PSBzdHViLkRlbFN0YXRlKEEpCglpZiBlcnIgIT0gbmlsIHsKCQlyZXR1cm4gc2hpbS5FcnJvcigiRmFpbGVkIHRvIGRlbGV0ZSBzdGF0ZSIpCgl9CgoJcmV0dXJuIHNoaW0uU3VjY2VzcyhuaWwpCn0KCi8vIHF1ZXJ5IGNhbGxiYWNrIHJlcHJlc2VudGluZyB0aGUgcXVlcnkgb2YgYSBjaGFpbmNvZGUKZnVuYyAodCAqU2ltcGxlQ2hhaW5jb2RlKSBxdWVyeShzdHViIHNoaW0uQ2hhaW5jb2RlU3R1YkludGVyZmFjZSwgYXJncyBbXXN0cmluZykgcGIuUmVzcG9uc2UgewoJdmFyIEEgc3RyaW5nIC8vIEVudGl0aWVzCgl2YXIgZXJyIGVycm9yCgoJaWYgbGVuKGFyZ3MpICE9IDEgewoJCXJldHVybiBzaGltLkVycm9yKCJJbmNvcnJlY3QgbnVtYmVyIG9mIGFyZ3VtZW50cy4gRXhwZWN0aW5nIG5hbWUgb2YgdGhlIHBlcnNvbiB0byBxdWVyeSIpCgl9CgoJQSA9IGFyZ3NbMF0KCgkvLyBHZXQgdGhlIHN0YXRlIGZyb20gdGhlIGxlZGdlcgoJQXZhbGJ5dGVzLCBlcnIgOj0gc3R1Yi5HZXRTdGF0ZShBKQoJaWYgZXJyICE9IG5pbCB7CgkJanNvblJlc3AgOj0gIntcIkVycm9yXCI6XCJGYWlsZWQgdG8gZ2V0IHN0YXRlIGZvciAiICsgQSArICJcIn0iCgkJcmV0dXJuIHNoaW0uRXJyb3IoanNvblJlc3ApCgl9CgoJaWYgQXZhbGJ5dGVzID09IG5pbCB7CgkJanNvblJlc3AgOj0gIntcIkVycm9yXCI6XCJOaWwgYW1vdW50IGZvciAiICsgQSArICJcIn0iCgkJcmV0dXJuIHNoaW0uRXJyb3IoanNvblJlc3ApCgl9CgoJanNvblJlc3AgOj0gIntcIk5hbWVcIjpcIiIgKyBBICsgIlwiLFwiQW1vdW50XCI6XCIiICsgc3RyaW5nKEF2YWxieXRlcykgKyAiXCJ9IgoJZm10LlByaW50ZigiUXVlcnkgUmVzcG9uc2U6JXNcbiIsIGpzb25SZXNwKQoJcmV0dXJuIHNoaW0uU3VjY2VzcyhBdmFsYnl0ZXMpCn0KCmZ1bmMgbWFpbigpIHsKCWVyciA6PSBzaGltLlN0YXJ0KG5ldyhTaW1wbGVDaGFpbmNvZGUpKQoJaWYgZXJyICE9IG5pbCB7CgkJZm10LlByaW50ZigiRXJyb3Igc3RhcnRpbmcgU2ltcGxlIGNoYWluY29kZTogJXMiLCBlcnIpCgl9Cn0K\",\r\n  \"abbreviation\":\"别名\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/template/update",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"template",
+								"update"
+							]
+						},
+						"description": "修改模板"
+					},
+					"response": []
+				},
+				{
+					"name": "删除",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ids\": [\"616603015700402176\",\"614870313292943360\"]\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/template/delete",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"template",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"618167713155526656\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/template/get",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"template",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "条件分页查询",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-userid",
+								"value": "613463581383565312",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"number\":\"\",\n\t\"name\":\"\",\n\t\"pageNum\":1,\n\t\"pageSize\":10\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/template/page",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"template",
+								"page"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "65495fe6-99c4-4ea5-9e7b-80755ac49253",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "280b4939-b1ee-4e24-8575-580c3e1498cb",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "证书",
+			"item": [
+				{
+					"name": "查询",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":\"615937724695879680\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/cert/gets",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"cert",
+								"gets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "条件分页查询证书",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"number\":\"\",\n\t\"projectId\":\"\",\n\t\"pageNum\":1,\n\t\"pageSize\":10\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/cert/page",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"cert",
+								"page"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "修改证书",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":\"001\",\n\t\"projectId\":\"613322810009436160\",\n\t\"number\":\"base64X509\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/cert/update",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"cert",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除证书",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"ids\":[\"616929164750082048\",\"613021676262739968\"]\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/cert/delete",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"cert",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "启用证书",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"ids\":[\"615937724695879680\",\"616929164750082048\"]\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/cert/enable",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"cert",
+								"enable"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "禁用证书",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"ids\":[\"615937724695879680\",\"616929164750082048\"]\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/cert/disable",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"cert",
+								"disable"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "添加证书",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"\":\"\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/cert/insert",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"cert",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "项目",
+			"item": [
+				{
+					"name": "条件分页查询项目",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-userid",
+								"value": "613463581383565312",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"\",\r\n    \"organizationId\":\"\",\r\n    \"pageNum\":1,\r\n    \"pageSize\":10\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/project/page",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"project",
+								"page"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "修改",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":\"\",\n\t\"name\":\"项目test\",\n\t\"description\":\"msg\",\n\t\"organizationId\":\"613693156692680704\",\n\t\"contact\":\"联系人\",\n\t\"contactPhone\":\"13800138000\",\n\t\"host\":\"http://192.168.0.1\",\n    \"ipAddress\":\"ip\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/project/update",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"project",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":\"618035918208512000\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/project/get",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"project",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "添加项目",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"项目10\",\n    \"description\": \"msg\",\n    \"organizationId\": \"613693156692680704\",\n    \"contact\": \"联系人\",\n    \"contactPhone\": \"13800138000\",\n    \"host\": \"http://192.168.0.1\",\n    \"ipAddress\":\"ip\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/project/insert",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"project",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除项目",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"ids\":[\"616357161441820672\",\"616632745178812416\"]\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/project/delete",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"project",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询节点",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/project/queryHost",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"project",
+								"queryHost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "业务总览-获取应用的用户",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8110/project/user/get",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"project",
+								"user",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "业务总览-服务部门",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8110/project/organization/get",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"project",
+								"organization",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "业务总览-当月,本周,当日新增应用：",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8110/project/total",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"project",
+								"total"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取项目名称",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "用户（应用）新增列表",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"\",\n\t\"organizationId\":\"\",\n\t\"pageNum\":1,\n\t\"pageSize\":10,\n\t\"startTime\":\"20191001142201\",\n\t\"endTime\":\"2019101142201\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/project/page-overview",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"project",
+								"page-overview"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "日志",
+			"item": [
+				{
+					"name": "分页条件查询",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"startTime\":\"\",\r\n    \"endTime\":\"\",\r\n    \"type\":\"\",\r\n    \"content\":\"\",\r\n    \"pageNum\":1,\r\n    \"pageSize\":10\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/journal/page",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"journal",
+								"page"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "合约",
+			"item": [
+				{
+					"name": "合约查询",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"projectId\":\"\",\n\t\"number\":\"\",\n\t\"state\":\"\",\n\t\"pageNum\":1,\n\t\"pageSize\":10\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/contract/query",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"contract",
+								"query"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "合约添加",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-userid",
+								"value": "3",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"contractName\":\"contacttest\",\n\t\"projectId\":\"613322810009436160\",\n\t\"contractDesc\":\"contactTest desc\",\n\t\"fileBase64\": \"LyoKQ29weXJpZ2h0IElCTSBDb3JwLiAyMDE2IEFsbCBSaWdodHMgUmVzZXJ2ZWQuCgpMaWNlbnNlZCB1bmRlciB0aGUgQXBhY2hlIExpY2Vuc2UsIFZlcnNpb24gMi4wICh0aGUgIkxpY2Vuc2UiKTsKeW91IG1heSBub3QgdXNlIHRoaXMgZmlsZSBleGNlcHQgaW4gY29tcGxpYW5jZSB3aXRoIHRoZSBMaWNlbnNlLgpZb3UgbWF5IG9idGFpbiBhIGNvcHkgb2YgdGhlIExpY2Vuc2UgYXQKCgkJIGh0dHA6Ly93d3cuYXBhY2hlLm9yZy9saWNlbnNlcy9MSUNFTlNFLTIuMAoKVW5sZXNzIHJlcXVpcmVkIGJ5IGFwcGxpY2FibGUgbGF3IG9yIGFncmVlZCB0byBpbiB3cml0aW5nLCBzb2Z0d2FyZQpkaXN0cmlidXRlZCB1bmRlciB0aGUgTGljZW5zZSBpcyBkaXN0cmlidXRlZCBvbiBhbiAiQVMgSVMiIEJBU0lTLApXSVRIT1VUIFdBUlJBTlRJRVMgT1IgQ09ORElUSU9OUyBPRiBBTlkgS0lORCwgZWl0aGVyIGV4cHJlc3Mgb3IgaW1wbGllZC4KU2VlIHRoZSBMaWNlbnNlIGZvciB0aGUgc3BlY2lmaWMgbGFuZ3VhZ2UgZ292ZXJuaW5nIHBlcm1pc3Npb25zIGFuZApsaW1pdGF0aW9ucyB1bmRlciB0aGUgTGljZW5zZS4KKi8KCnBhY2thZ2UgbWFpbgoKLy9XQVJOSU5HIC0gdGhpcyBjaGFpbmNvZGUncyBJRCBpcyBoYXJkLWNvZGVkIGluIGNoYWluY29kZV9leGFtcGxlMDQgdG8gaWxsdXN0cmF0ZSBvbmUgd2F5IG9mCi8vY2FsbGluZyBjaGFpbmNvZGUgZnJvbSBhIGNoYWluY29kZS4gSWYgdGhpcyBleGFtcGxlIGlzIG1vZGlmaWVkLCBjaGFpbmNvZGVfZXhhbXBsZTA0LmdvIGhhcwovL3RvIGJlIG1vZGlmaWVkIGFzIHdlbGwgd2l0aCB0aGUgbmV3IElEIG9mIGNoYWluY29kZV9leGFtcGxlMDIuCi8vY2hhaW5jb2RlX2V4YW1wbGUwNSBzaG93J3MgaG93IGNoYWluY29kZSBJRCBjYW4gYmUgcGFzc2VkIGluIGFzIGEgcGFyYW1ldGVyIGluc3RlYWQgb2YKLy9oYXJkLWNvZGluZy4KCmltcG9ydCAoCgkiZm10IgoJInN0cmNvbnYiCgoJImdpdGh1Yi5jb20vaHlwZXJsZWRnZXIvZmFicmljL2NvcmUvY2hhaW5jb2RlL3NoaW0iCglwYiAiZ2l0aHViLmNvbS9oeXBlcmxlZGdlci9mYWJyaWMvcHJvdG9zL3BlZXIiCikKCi8vIFNpbXBsZUNoYWluY29kZSBleGFtcGxlIHNpbXBsZSBDaGFpbmNvZGUgaW1wbGVtZW50YXRpb24KdHlwZSBTaW1wbGVDaGFpbmNvZGUgc3RydWN0IHsKfQoKZnVuYyAodCAqU2ltcGxlQ2hhaW5jb2RlKSBJbml0KHN0dWIgc2hpbS5DaGFpbmNvZGVTdHViSW50ZXJmYWNlKSBwYi5SZXNwb25zZSB7CglmbXQuUHJpbnRsbigiZXgwMiBJbml0IikKCV8sIGFyZ3MgOj0gc3R1Yi5HZXRGdW5jdGlvbkFuZFBhcmFtZXRlcnMoKQoJdmFyIEEsIEIgc3RyaW5nICAgIC8vIEVudGl0aWVzCgl2YXIgQXZhbCwgQnZhbCBpbnQgLy8gQXNzZXQgaG9sZGluZ3MKCXZhciBlcnIgZXJyb3IKCglpZiBsZW4oYXJncykgIT0gNCB7CgkJcmV0dXJuIHNoaW0uRXJyb3IoIkluY29ycmVjdCBudW1iZXIgb2YgYXJndW1lbnRzLiBFeHBlY3RpbmcgNCIpCgl9CgoJLy8gSW5pdGlhbGl6ZSB0aGUgY2hhaW5jb2RlCglBID0gYXJnc1swXQoJQXZhbCwgZXJyID0gc3RyY29udi5BdG9pKGFyZ3NbMV0pCglpZiBlcnIgIT0gbmlsIHsKCQlyZXR1cm4gc2hpbS5FcnJvcigiRXhwZWN0aW5nIGludGVnZXIgdmFsdWUgZm9yIGFzc2V0IGhvbGRpbmciKQoJfQoJQiA9IGFyZ3NbMl0KCUJ2YWwsIGVyciA9IHN0cmNvbnYuQXRvaShhcmdzWzNdKQoJaWYgZXJyICE9IG5pbCB7CgkJcmV0dXJuIHNoaW0uRXJyb3IoIkV4cGVjdGluZyBpbnRlZ2VyIHZhbHVlIGZvciBhc3NldCBob2xkaW5nIikKCX0KCWZtdC5QcmludGYoIkF2YWwgPSAlZCwgQnZhbCA9ICVkXG4iLCBBdmFsLCBCdmFsKQoKCS8vIFdyaXRlIHRoZSBzdGF0ZSB0byB0aGUgbGVkZ2VyCgllcnIgPSBzdHViLlB1dFN0YXRlKEEsIFtdYnl0ZShzdHJjb252Lkl0b2EoQXZhbCkpKQoJaWYgZXJyICE9IG5pbCB7CgkJcmV0dXJuIHNoaW0uRXJyb3IoZXJyLkVycm9yKCkpCgl9CgoJZXJyID0gc3R1Yi5QdXRTdGF0ZShCLCBbXWJ5dGUoc3RyY29udi5JdG9hKEJ2YWwpKSkKCWlmIGVyciAhPSBuaWwgewoJCXJldHVybiBzaGltLkVycm9yKGVyci5FcnJvcigpKQoJfQoKCXJldHVybiBzaGltLlN1Y2Nlc3MobmlsKQp9CgpmdW5jICh0ICpTaW1wbGVDaGFpbmNvZGUpIEludm9rZShzdHViIHNoaW0uQ2hhaW5jb2RlU3R1YkludGVyZmFjZSkgcGIuUmVzcG9uc2UgewoJZm10LlByaW50bG4oImV4MDIgSW52b2tlIikKCWZ1bmN0aW9uLCBhcmdzIDo9IHN0dWIuR2V0RnVuY3Rpb25BbmRQYXJhbWV0ZXJzKCkKCWlmIGZ1bmN0aW9uID09ICJpbnZva2UiIHsKCQkvLyBNYWtlIHBheW1lbnQgb2YgWCB1bml0cyBmcm9tIEEgdG8gQgoJCXJldHVybiB0Lmludm9rZShzdHViLCBhcmdzKQoJfSBlbHNlIGlmIGZ1bmN0aW9uID09ICJkZWxldGUiIHsKCQkvLyBEZWxldGVzIGFuIGVudGl0eSBmcm9tIGl0cyBzdGF0ZQoJCXJldHVybiB0LmRlbGV0ZShzdHViLCBhcmdzKQoJfSBlbHNlIGlmIGZ1bmN0aW9uID09ICJxdWVyeSIgewoJCS8vIHRoZSBvbGQgIlF1ZXJ5IiBpcyBub3cgaW1wbGVtdG5lZCBpbiBpbnZva2UKCQlyZXR1cm4gdC5xdWVyeShzdHViLCBhcmdzKQoJfQoKCXJldHVybiBzaGltLkVycm9yKCJJbnZhbGlkIGludm9rZSBmdW5jdGlvbiBuYW1lLiBFeHBlY3RpbmcgXCJpbnZva2VcIiBcImRlbGV0ZVwiIFwicXVlcnlcIiIpCn0KCi8vIFRyYW5zYWN0aW9uIG1ha2VzIHBheW1lbnQgb2YgWCB1bml0cyBmcm9tIEEgdG8gQgpmdW5jICh0ICpTaW1wbGVDaGFpbmNvZGUpIGludm9rZShzdHViIHNoaW0uQ2hhaW5jb2RlU3R1YkludGVyZmFjZSwgYXJncyBbXXN0cmluZykgcGIuUmVzcG9uc2UgewoJdmFyIEEsIEIgc3RyaW5nICAgIC8vIEVudGl0aWVzCgl2YXIgQXZhbCwgQnZhbCBpbnQgLy8gQXNzZXQgaG9sZGluZ3MKCXZhciBYIGludCAgICAgICAgICAvLyBUcmFuc2FjdGlvbiB2YWx1ZQoJdmFyIGVyciBlcnJvcgoKCWlmIGxlbihhcmdzKSAhPSAzIHsKCQlyZXR1cm4gc2hpbS5FcnJvcigiSW5jb3JyZWN0IG51bWJlciBvZiBhcmd1bWVudHMuIEV4cGVjdGluZyAzIikKCX0KCglBID0gYXJnc1swXQoJQiA9IGFyZ3NbMV0KCgkvLyBHZXQgdGhlIHN0YXRlIGZyb20gdGhlIGxlZGdlcgoJLy8gVE9ETzogd2lsbCBiZSBuaWNlIHRvIGhhdmUgYSBHZXRBbGxTdGF0ZSBjYWxsIHRvIGxlZGdlcgoJQXZhbGJ5dGVzLCBlcnIgOj0gc3R1Yi5HZXRTdGF0ZShBKQoJaWYgZXJyICE9IG5pbCB7CgkJcmV0dXJuIHNoaW0uRXJyb3IoIkZhaWxlZCB0byBnZXQgc3RhdGUiKQoJfQoJaWYgQXZhbGJ5dGVzID09IG5pbCB7CgkJcmV0dXJuIHNoaW0uRXJyb3IoIkVudGl0eSBub3QgZm91bmQiKQoJfQoJQXZhbCwgXyA9IHN0cmNvbnYuQXRvaShzdHJpbmcoQXZhbGJ5dGVzKSkKCglCdmFsYnl0ZXMsIGVyciA6PSBzdHViLkdldFN0YXRlKEIpCglpZiBlcnIgIT0gbmlsIHsKCQlyZXR1cm4gc2hpbS5FcnJvcigiRmFpbGVkIHRvIGdldCBzdGF0ZSIpCgl9CglpZiBCdmFsYnl0ZXMgPT0gbmlsIHsKCQlyZXR1cm4gc2hpbS5FcnJvcigiRW50aXR5IG5vdCBmb3VuZCIpCgl9CglCdmFsLCBfID0gc3RyY29udi5BdG9pKHN0cmluZyhCdmFsYnl0ZXMpKQoKCS8vIFBlcmZvcm0gdGhlIGV4ZWN1dGlvbgoJWCwgZXJyID0gc3RyY29udi5BdG9pKGFyZ3NbMl0pCglpZiBlcnIgIT0gbmlsIHsKCQlyZXR1cm4gc2hpbS5FcnJvcigiSW52YWxpZCB0cmFuc2FjdGlvbiBhbW91bnQsIGV4cGVjdGluZyBhIGludGVnZXIgdmFsdWUiKQoJfQoJQXZhbCA9IEF2YWwgLSBYCglCdmFsID0gQnZhbCArIFgKCWZtdC5QcmludGYoIkF2YWwgPSAlZCwgQnZhbCA9ICVkXG4iLCBBdmFsLCBCdmFsKQoKCS8vIFdyaXRlIHRoZSBzdGF0ZSBiYWNrIHRvIHRoZSBsZWRnZXIKCWVyciA9IHN0dWIuUHV0U3RhdGUoQSwgW11ieXRlKHN0cmNvbnYuSXRvYShBdmFsKSkpCglpZiBlcnIgIT0gbmlsIHsKCQlyZXR1cm4gc2hpbS5FcnJvcihlcnIuRXJyb3IoKSkKCX0KCgllcnIgPSBzdHViLlB1dFN0YXRlKEIsIFtdYnl0ZShzdHJjb252Lkl0b2EoQnZhbCkpKQoJaWYgZXJyICE9IG5pbCB7CgkJcmV0dXJuIHNoaW0uRXJyb3IoZXJyLkVycm9yKCkpCgl9CgoJcmV0dXJuIHNoaW0uU3VjY2VzcyhuaWwpCn0KCi8vIERlbGV0ZXMgYW4gZW50aXR5IGZyb20gc3RhdGUKZnVuYyAodCAqU2ltcGxlQ2hhaW5jb2RlKSBkZWxldGUoc3R1YiBzaGltLkNoYWluY29kZVN0dWJJbnRlcmZhY2UsIGFyZ3MgW11zdHJpbmcpIHBiLlJlc3BvbnNlIHsKCWlmIGxlbihhcmdzKSAhPSAxIHsKCQlyZXR1cm4gc2hpbS5FcnJvcigiSW5jb3JyZWN0IG51bWJlciBvZiBhcmd1bWVudHMuIEV4cGVjdGluZyAxIikKCX0KCglBIDo9IGFyZ3NbMF0KCgkvLyBEZWxldGUgdGhlIGtleSBmcm9tIHRoZSBzdGF0ZSBpbiBsZWRnZXIKCWVyciA6PSBzdHViLkRlbFN0YXRlKEEpCglpZiBlcnIgIT0gbmlsIHsKCQlyZXR1cm4gc2hpbS5FcnJvcigiRmFpbGVkIHRvIGRlbGV0ZSBzdGF0ZSIpCgl9CgoJcmV0dXJuIHNoaW0uU3VjY2VzcyhuaWwpCn0KCi8vIHF1ZXJ5IGNhbGxiYWNrIHJlcHJlc2VudGluZyB0aGUgcXVlcnkgb2YgYSBjaGFpbmNvZGUKZnVuYyAodCAqU2ltcGxlQ2hhaW5jb2RlKSBxdWVyeShzdHViIHNoaW0uQ2hhaW5jb2RlU3R1YkludGVyZmFjZSwgYXJncyBbXXN0cmluZykgcGIuUmVzcG9uc2UgewoJdmFyIEEgc3RyaW5nIC8vIEVudGl0aWVzCgl2YXIgZXJyIGVycm9yCgoJaWYgbGVuKGFyZ3MpICE9IDEgewoJCXJldHVybiBzaGltLkVycm9yKCJJbmNvcnJlY3QgbnVtYmVyIG9mIGFyZ3VtZW50cy4gRXhwZWN0aW5nIG5hbWUgb2YgdGhlIHBlcnNvbiB0byBxdWVyeSIpCgl9CgoJQSA9IGFyZ3NbMF0KCgkvLyBHZXQgdGhlIHN0YXRlIGZyb20gdGhlIGxlZGdlcgoJQXZhbGJ5dGVzLCBlcnIgOj0gc3R1Yi5HZXRTdGF0ZShBKQoJaWYgZXJyICE9IG5pbCB7CgkJanNvblJlc3AgOj0gIntcIkVycm9yXCI6XCJGYWlsZWQgdG8gZ2V0IHN0YXRlIGZvciAiICsgQSArICJcIn0iCgkJcmV0dXJuIHNoaW0uRXJyb3IoanNvblJlc3ApCgl9CgoJaWYgQXZhbGJ5dGVzID09IG5pbCB7CgkJanNvblJlc3AgOj0gIntcIkVycm9yXCI6XCJOaWwgYW1vdW50IGZvciAiICsgQSArICJcIn0iCgkJcmV0dXJuIHNoaW0uRXJyb3IoanNvblJlc3ApCgl9CgoJanNvblJlc3AgOj0gIntcIk5hbWVcIjpcIiIgKyBBICsgIlwiLFwiQW1vdW50XCI6XCIiICsgc3RyaW5nKEF2YWxieXRlcykgKyAiXCJ9IgoJZm10LlByaW50ZigiUXVlcnkgUmVzcG9uc2U6JXNcbiIsIGpzb25SZXNwKQoJcmV0dXJuIHNoaW0uU3VjY2VzcyhBdmFsYnl0ZXMpCn0KCmZ1bmMgbWFpbigpIHsKCWVyciA6PSBzaGltLlN0YXJ0KG5ldyhTaW1wbGVDaGFpbmNvZGUpKQoJaWYgZXJyICE9IG5pbCB7CgkJZm10LlByaW50ZigiRXJyb3Igc3RhcnRpbmcgU2ltcGxlIGNoYWluY29kZTogJXMiLCBlcnIpCgl9Cn0K\",\n\t\"abbreviation\":\"中文简称\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/contract/add",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"contract",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "修改合约",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":\"616933894616371200\",\n\t\"contractName\":\"contactTest\",\n\t\"projectId\":\"613322810009436160\",\n\t\"contractDesc\":\"contactTest desc\",\n\t\"fileBase64\": \"LyoKQ29weXJpZ2h0IElCTSBDb3JwLiAyMDE2IEFsbCBSaWdodHMgUmVzZXJ2ZWQuCgpMaWNlbnNlZCB1bmRlciB0aGUgQXBhY2hlIExpY2Vuc2UsIFZlcnNpb24gMi4wICh0aGUgIkxpY2Vuc2UiKTsKeW91IG1heSBub3QgdXNlIHRoaXMgZmlsZSBleGNlcHQgaW4gY29tcGxpYW5jZSB3aXRoIHRoZSBMaWNlbnNlLgpZb3UgbWF5IG9idGFpbiBhIGNvcHkgb2YgdGhlIExpY2Vuc2UgYXQKCgkJIGh0dHA6Ly93d3cuYXBhY2hlLm9yZy9saWNlbnNlcy9MSUNFTlNFLTIuMAoKVW5sZXNzIHJlcXVpcmVkIGJ5IGFwcGxpY2FibGUgbGF3IG9yIGFncmVlZCB0byBpbiB3cml0aW5nLCBzb2Z0d2FyZQpkaXN0cmlidXRlZCB1bmRlciB0aGUgTGljZW5zZSBpcyBkaXN0cmlidXRlZCBvbiBhbiAiQVMgSVMiIEJBU0lTLApXSVRIT1VUIFdBUlJBTlRJRVMgT1IgQ09ORElUSU9OUyBPRiBBTlkgS0lORCwgZWl0aGVyIGV4cHJlc3Mgb3IgaW1wbGllZC4KU2VlIHRoZSBMaWNlbnNlIGZvciB0aGUgc3BlY2lmaWMgbGFuZ3VhZ2UgZ292ZXJuaW5nIHBlcm1pc3Npb25zIGFuZApsaW1pdGF0aW9ucyB1bmRlciB0aGUgTGljZW5zZS4KKi8KCnBhY2thZ2UgbWFpbgoKLy9XQVJOSU5HIC0gdGhpcyBjaGFpbmNvZGUncyBJRCBpcyBoYXJkLWNvZGVkIGluIGNoYWluY29kZV9leGFtcGxlMDQgdG8gaWxsdXN0cmF0ZSBvbmUgd2F5IG9mCi8vY2FsbGluZyBjaGFpbmNvZGUgZnJvbSBhIGNoYWluY29kZS4gSWYgdGhpcyBleGFtcGxlIGlzIG1vZGlmaWVkLCBjaGFpbmNvZGVfZXhhbXBsZTA0LmdvIGhhcwovL3RvIGJlIG1vZGlmaWVkIGFzIHdlbGwgd2l0aCB0aGUgbmV3IElEIG9mIGNoYWluY29kZV9leGFtcGxlMDIuCi8vY2hhaW5jb2RlX2V4YW1wbGUwNSBzaG93J3MgaG93IGNoYWluY29kZSBJRCBjYW4gYmUgcGFzc2VkIGluIGFzIGEgcGFyYW1ldGVyIGluc3RlYWQgb2YKLy9oYXJkLWNvZGluZy4KCmltcG9ydCAoCgkiZm10IgoJInN0cmNvbnYiCgoJImdpdGh1Yi5jb20vaHlwZXJsZWRnZXIvZmFicmljL2NvcmUvY2hhaW5jb2RlL3NoaW0iCglwYiAiZ2l0aHViLmNvbS9oeXBlcmxlZGdlci9mYWJyaWMvcHJvdG9zL3BlZXIiCikKCi8vIFNpbXBsZUNoYWluY29kZSBleGFtcGxlIHNpbXBsZSBDaGFpbmNvZGUgaW1wbGVtZW50YXRpb24KdHlwZSBTaW1wbGVDaGFpbmNvZGUgc3RydWN0IHsKfQoKZnVuYyAodCAqU2ltcGxlQ2hhaW5jb2RlKSBJbml0KHN0dWIgc2hpbS5DaGFpbmNvZGVTdHViSW50ZXJmYWNlKSBwYi5SZXNwb25zZSB7CglmbXQuUHJpbnRsbigiZXgwMiBJbml0IikKCV8sIGFyZ3MgOj0gc3R1Yi5HZXRGdW5jdGlvbkFuZFBhcmFtZXRlcnMoKQoJdmFyIEEsIEIgc3RyaW5nICAgIC8vIEVudGl0aWVzCgl2YXIgQXZhbCwgQnZhbCBpbnQgLy8gQXNzZXQgaG9sZGluZ3MKCXZhciBlcnIgZXJyb3IKCglpZiBsZW4oYXJncykgIT0gNCB7CgkJcmV0dXJuIHNoaW0uRXJyb3IoIkluY29ycmVjdCBudW1iZXIgb2YgYXJndW1lbnRzLiBFeHBlY3RpbmcgNCIpCgl9CgoJLy8gSW5pdGlhbGl6ZSB0aGUgY2hhaW5jb2RlCglBID0gYXJnc1swXQoJQXZhbCwgZXJyID0gc3RyY29udi5BdG9pKGFyZ3NbMV0pCglpZiBlcnIgIT0gbmlsIHsKCQlyZXR1cm4gc2hpbS5FcnJvcigiRXhwZWN0aW5nIGludGVnZXIgdmFsdWUgZm9yIGFzc2V0IGhvbGRpbmciKQoJfQoJQiA9IGFyZ3NbMl0KCUJ2YWwsIGVyciA9IHN0cmNvbnYuQXRvaShhcmdzWzNdKQoJaWYgZXJyICE9IG5pbCB7CgkJcmV0dXJuIHNoaW0uRXJyb3IoIkV4cGVjdGluZyBpbnRlZ2VyIHZhbHVlIGZvciBhc3NldCBob2xkaW5nIikKCX0KCWZtdC5QcmludGYoIkF2YWwgPSAlZCwgQnZhbCA9ICVkXG4iLCBBdmFsLCBCdmFsKQoKCS8vIFdyaXRlIHRoZSBzdGF0ZSB0byB0aGUgbGVkZ2VyCgllcnIgPSBzdHViLlB1dFN0YXRlKEEsIFtdYnl0ZShzdHJjb252Lkl0b2EoQXZhbCkpKQoJaWYgZXJyICE9IG5pbCB7CgkJcmV0dXJuIHNoaW0uRXJyb3IoZXJyLkVycm9yKCkpCgl9CgoJZXJyID0gc3R1Yi5QdXRTdGF0ZShCLCBbXWJ5dGUoc3RyY29udi5JdG9hKEJ2YWwpKSkKCWlmIGVyciAhPSBuaWwgewoJCXJldHVybiBzaGltLkVycm9yKGVyci5FcnJvcigpKQoJfQoKCXJldHVybiBzaGltLlN1Y2Nlc3MobmlsKQp9CgpmdW5jICh0ICpTaW1wbGVDaGFpbmNvZGUpIEludm9rZShzdHViIHNoaW0uQ2hhaW5jb2RlU3R1YkludGVyZmFjZSkgcGIuUmVzcG9uc2UgewoJZm10LlByaW50bG4oImV4MDIgSW52b2tlIikKCWZ1bmN0aW9uLCBhcmdzIDo9IHN0dWIuR2V0RnVuY3Rpb25BbmRQYXJhbWV0ZXJzKCkKCWlmIGZ1bmN0aW9uID09ICJpbnZva2UiIHsKCQkvLyBNYWtlIHBheW1lbnQgb2YgWCB1bml0cyBmcm9tIEEgdG8gQgoJCXJldHVybiB0Lmludm9rZShzdHViLCBhcmdzKQoJfSBlbHNlIGlmIGZ1bmN0aW9uID09ICJkZWxldGUiIHsKCQkvLyBEZWxldGVzIGFuIGVudGl0eSBmcm9tIGl0cyBzdGF0ZQoJCXJldHVybiB0LmRlbGV0ZShzdHViLCBhcmdzKQoJfSBlbHNlIGlmIGZ1bmN0aW9uID09ICJxdWVyeSIgewoJCS8vIHRoZSBvbGQgIlF1ZXJ5IiBpcyBub3cgaW1wbGVtdG5lZCBpbiBpbnZva2UKCQlyZXR1cm4gdC5xdWVyeShzdHViLCBhcmdzKQoJfQoKCXJldHVybiBzaGltLkVycm9yKCJJbnZhbGlkIGludm9rZSBmdW5jdGlvbiBuYW1lLiBFeHBlY3RpbmcgXCJpbnZva2VcIiBcImRlbGV0ZVwiIFwicXVlcnlcIiIpCn0KCi8vIFRyYW5zYWN0aW9uIG1ha2VzIHBheW1lbnQgb2YgWCB1bml0cyBmcm9tIEEgdG8gQgpmdW5jICh0ICpTaW1wbGVDaGFpbmNvZGUpIGludm9rZShzdHViIHNoaW0uQ2hhaW5jb2RlU3R1YkludGVyZmFjZSwgYXJncyBbXXN0cmluZykgcGIuUmVzcG9uc2UgewoJdmFyIEEsIEIgc3RyaW5nICAgIC8vIEVudGl0aWVzCgl2YXIgQXZhbCwgQnZhbCBpbnQgLy8gQXNzZXQgaG9sZGluZ3MKCXZhciBYIGludCAgICAgICAgICAvLyBUcmFuc2FjdGlvbiB2YWx1ZQoJdmFyIGVyciBlcnJvcgoKCWlmIGxlbihhcmdzKSAhPSAzIHsKCQlyZXR1cm4gc2hpbS5FcnJvcigiSW5jb3JyZWN0IG51bWJlciBvZiBhcmd1bWVudHMuIEV4cGVjdGluZyAzIikKCX0KCglBID0gYXJnc1swXQoJQiA9IGFyZ3NbMV0KCgkvLyBHZXQgdGhlIHN0YXRlIGZyb20gdGhlIGxlZGdlcgoJLy8gVE9ETzogd2lsbCBiZSBuaWNlIHRvIGhhdmUgYSBHZXRBbGxTdGF0ZSBjYWxsIHRvIGxlZGdlcgoJQXZhbGJ5dGVzLCBlcnIgOj0gc3R1Yi5HZXRTdGF0ZShBKQoJaWYgZXJyICE9IG5pbCB7CgkJcmV0dXJuIHNoaW0uRXJyb3IoIkZhaWxlZCB0byBnZXQgc3RhdGUiKQoJfQoJaWYgQXZhbGJ5dGVzID09IG5pbCB7CgkJcmV0dXJuIHNoaW0uRXJyb3IoIkVudGl0eSBub3QgZm91bmQiKQoJfQoJQXZhbCwgXyA9IHN0cmNvbnYuQXRvaShzdHJpbmcoQXZhbGJ5dGVzKSkKCglCdmFsYnl0ZXMsIGVyciA6PSBzdHViLkdldFN0YXRlKEIpCglpZiBlcnIgIT0gbmlsIHsKCQlyZXR1cm4gc2hpbS5FcnJvcigiRmFpbGVkIHRvIGdldCBzdGF0ZSIpCgl9CglpZiBCdmFsYnl0ZXMgPT0gbmlsIHsKCQlyZXR1cm4gc2hpbS5FcnJvcigiRW50aXR5IG5vdCBmb3VuZCIpCgl9CglCdmFsLCBfID0gc3RyY29udi5BdG9pKHN0cmluZyhCdmFsYnl0ZXMpKQoKCS8vIFBlcmZvcm0gdGhlIGV4ZWN1dGlvbgoJWCwgZXJyID0gc3RyY29udi5BdG9pKGFyZ3NbMl0pCglpZiBlcnIgIT0gbmlsIHsKCQlyZXR1cm4gc2hpbS5FcnJvcigiSW52YWxpZCB0cmFuc2FjdGlvbiBhbW91bnQsIGV4cGVjdGluZyBhIGludGVnZXIgdmFsdWUiKQoJfQoJQXZhbCA9IEF2YWwgLSBYCglCdmFsID0gQnZhbCArIFgKCWZtdC5QcmludGYoIkF2YWwgPSAlZCwgQnZhbCA9ICVkXG4iLCBBdmFsLCBCdmFsKQoKCS8vIFdyaXRlIHRoZSBzdGF0ZSBiYWNrIHRvIHRoZSBsZWRnZXIKCWVyciA9IHN0dWIuUHV0U3RhdGUoQSwgW11ieXRlKHN0cmNvbnYuSXRvYShBdmFsKSkpCglpZiBlcnIgIT0gbmlsIHsKCQlyZXR1cm4gc2hpbS5FcnJvcihlcnIuRXJyb3IoKSkKCX0KCgllcnIgPSBzdHViLlB1dFN0YXRlKEIsIFtdYnl0ZShzdHJjb252Lkl0b2EoQnZhbCkpKQoJaWYgZXJyICE9IG5pbCB7CgkJcmV0dXJuIHNoaW0uRXJyb3IoZXJyLkVycm9yKCkpCgl9CgoJcmV0dXJuIHNoaW0uU3VjY2VzcyhuaWwpCn0KCi8vIERlbGV0ZXMgYW4gZW50aXR5IGZyb20gc3RhdGUKZnVuYyAodCAqU2ltcGxlQ2hhaW5jb2RlKSBkZWxldGUoc3R1YiBzaGltLkNoYWluY29kZVN0dWJJbnRlcmZhY2UsIGFyZ3MgW11zdHJpbmcpIHBiLlJlc3BvbnNlIHsKCWlmIGxlbihhcmdzKSAhPSAxIHsKCQlyZXR1cm4gc2hpbS5FcnJvcigiSW5jb3JyZWN0IG51bWJlciBvZiBhcmd1bWVudHMuIEV4cGVjdGluZyAxIikKCX0KCglBIDo9IGFyZ3NbMF0KCgkvLyBEZWxldGUgdGhlIGtleSBmcm9tIHRoZSBzdGF0ZSBpbiBsZWRnZXIKCWVyciA6PSBzdHViLkRlbFN0YXRlKEEpCglpZiBlcnIgIT0gbmlsIHsKCQlyZXR1cm4gc2hpbS5FcnJvcigiRmFpbGVkIHRvIGRlbGV0ZSBzdGF0ZSIpCgl9CgoJcmV0dXJuIHNoaW0uU3VjY2VzcyhuaWwpCn0KCi8vIHF1ZXJ5IGNhbGxiYWNrIHJlcHJlc2VudGluZyB0aGUgcXVlcnkgb2YgYSBjaGFpbmNvZGUKZnVuYyAodCAqU2ltcGxlQ2hhaW5jb2RlKSBxdWVyeShzdHViIHNoaW0uQ2hhaW5jb2RlU3R1YkludGVyZmFjZSwgYXJncyBbXXN0cmluZykgcGIuUmVzcG9uc2UgewoJdmFyIEEgc3RyaW5nIC8vIEVudGl0aWVzCgl2YXIgZXJyIGVycm9yCgoJaWYgbGVuKGFyZ3MpICE9IDEgewoJCXJldHVybiBzaGltLkVycm9yKCJJbmNvcnJlY3QgbnVtYmVyIG9mIGFyZ3VtZW50cy4gRXhwZWN0aW5nIG5hbWUgb2YgdGhlIHBlcnNvbiB0byBxdWVyeSIpCgl9CgoJQSA9IGFyZ3NbMF0KCgkvLyBHZXQgdGhlIHN0YXRlIGZyb20gdGhlIGxlZGdlcgoJQXZhbGJ5dGVzLCBlcnIgOj0gc3R1Yi5HZXRTdGF0ZShBKQoJaWYgZXJyICE9IG5pbCB7CgkJanNvblJlc3AgOj0gIntcIkVycm9yXCI6XCJGYWlsZWQgdG8gZ2V0IHN0YXRlIGZvciAiICsgQSArICJcIn0iCgkJcmV0dXJuIHNoaW0uRXJyb3IoanNvblJlc3ApCgl9CgoJaWYgQXZhbGJ5dGVzID09IG5pbCB7CgkJanNvblJlc3AgOj0gIntcIkVycm9yXCI6XCJOaWwgYW1vdW50IGZvciAiICsgQSArICJcIn0iCgkJcmV0dXJuIHNoaW0uRXJyb3IoanNvblJlc3ApCgl9CgoJanNvblJlc3AgOj0gIntcIk5hbWVcIjpcIiIgKyBBICsgIlwiLFwiQW1vdW50XCI6XCIiICsgc3RyaW5nKEF2YWxieXRlcykgKyAiXCJ9IgoJZm10LlByaW50ZigiUXVlcnkgUmVzcG9uc2U6JXNcbiIsIGpzb25SZXNwKQoJcmV0dXJuIHNoaW0uU3VjY2VzcyhBdmFsYnl0ZXMpCn0KCmZ1bmMgbWFpbigpIHsKCWVyciA6PSBzaGltLlN0YXJ0KG5ldyhTaW1wbGVDaGFpbmNvZGUpKQoJaWYgZXJyICE9IG5pbCB7CgkJZm10LlByaW50ZigiRXJyb3Igc3RhcnRpbmcgU2ltcGxlIGNoYWluY29kZTogJXMiLCBlcnIpCgl9Cn0K\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/contract/edit",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"contract",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":\"617082623839358976\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/contract/get",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"contract",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "部署",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"contractId\":\"\",\n\t\"contractVersion\":\"\",\n\t\"consensusNodes\":[\"\"],\n\t\"initParams\":\"\",\n\t\"orgs\":\"\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/contract/deploy",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"contract",
+								"deploy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "合约总量和合约升级量",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8110/contract/total",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"contract",
+								"total"
+							]
+						},
+						"description": "合约总量"
+					},
+					"response": []
+				},
+				{
+					"name": "getProjectAndOrganizationByName",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"contractName\":\"QA\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/contract/getProjectAndOrganizationByName",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"contract",
+								"getProjectAndOrganizationByName"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "统计各部门合约量",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8110/contract/organization/total",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"contract",
+								"organization",
+								"total"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "月上传量--本月的上传量与上个月上传量比较",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "月升级量--本月的升级量与上个月升级量比较",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "合约部门分布---查出合约量前n的部门，多于n个只返回n个，n为入参",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "统计最近30天的合约量--返回横纵坐标",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/javascript",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"days\":30\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/contract/total/lastDay",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"contract",
+								"total",
+								"lastDay"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "合约上传列表：分页查询合约表（SYSTEM_CONTRACT），入参有时间区间",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"\":\"\",\n\t\"\":\"\",\n\t\"\":\"\",\n\t\"\":\"\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/contract/page",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"contract",
+								"page"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "合约升级列表：分页查询合约历史表（SYSTEM_CONTRACT_HISTORY），查询结果CONTRACT_ID唯",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"startTime\":\"20190826144804\",\n\t\"endTime\":\"20190926144804\",\n\t\"pageSize\":10,\n\t\"pageNum\":1\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/contract/history/page",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"contract",
+								"history",
+								"page"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "监控中心",
+			"item": [
+				{
+					"name": "合约累计调用",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8090/index/queryCumulativeContractTotal",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"index",
+								"queryCumulativeContractTotal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "本周服务量",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8090/index/queryCumulativeContractTotal",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"index",
+								"queryCumulativeContractTotal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "今日服务量",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8090/index/queryContractTotalToday",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"index",
+								"queryContractTotalToday"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "当月服务量",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8090/index/queryCumulativeContractTotal",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"index",
+								"queryCumulativeContractTotal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "total",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8090/index/total",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"index",
+								"total"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "合约记录添加",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"contractName\":\"contract\",\n\t\"contractVersion\":\"1.0\",\n\t\"contractChannel\":\"合约通道\",\n\t\"contractFcn\":\"method\",\n\t\"projectName\":\"projectName\",\n\t\"organizationName\":\"organizationName\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8090/index/insert",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"index",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sdk调用分页查询",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "根据项目统计合约调用记录",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8090/call/sdk/record/project/total",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"call",
+								"sdk",
+								"record",
+								"project",
+								"total"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "根据合约名称统计合约调用记录",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8090/call/sdk/record/contract/total",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"call",
+								"sdk",
+								"record",
+								"contract",
+								"total"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "统计各部门合约量",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8090/call/sdk/record/organization/total",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"call",
+								"sdk",
+								"record",
+								"organization",
+								"total"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "统计报表",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"startTime\":\"20190919111204\",\n\t\"endTime\":\"20190923111204\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8090/call/sdk/record/bargraph/total",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"call",
+								"sdk",
+								"record",
+								"bargraph",
+								"total"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "userAccount",
+			"item": [
+				{
+					"name": "edit",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":\"613816396064837632\",\n\t\"userId\":\"613816395959980032\",\n\t\"credential\":\"password\",\n\t\"credentialExpired\":\"\",\n\t\"oldCredential\":\"password\",\n\t\"accountExpired\":\"\",\n\t\"lastLoginTime\":\"1567995789462\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/res/user/account/edit",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"res",
+								"user",
+								"account",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "query",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"identityType\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/res/user/account/query",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"res",
+								"user",
+								"account",
+								"query"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"identityType\":\"\",\n\t\"identifier\":\"\",\n\t\"credential\":\"\",\n\t\"loginMode\":\"\",\n\t\"credentialExpired\":\"\",\n\t\"accountExpired\":\"\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/res/user/account/add",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"res",
+								"user",
+								"account",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "page",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/res/user/account/page",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"res",
+								"user",
+								"account",
+								"page"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "disable",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"ids\":[\"\"]\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/res/user/account/disable",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"res",
+								"user",
+								"account",
+								"disable"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "enable",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"ids\":[\"\"]\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/res/user/account/enable",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"res",
+								"user",
+								"account",
+								"enable"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "userInfo",
+			"item": [
+				{
+					"name": "edit",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":\"\",\n\t\"platformUserId\":\"\",\n\t\"organizationId\":\"\",\n\t\"nodeId\":\"\",\n\t\"sex\":\"\",\n\t\"birthday\":\"\",\n\t\"faceUrl\":\"\",\n\t\"name\":\"\",\n\t\"email\":\"\",\n\t\"telPhone\":\"\",\n\t\"position\":\"\",\n\t\"remark\":\"\",\n\t\"platPersonId\":\"\",\n\t\"sign\":\"\",\n\t\"briefIntrod\":\"\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/res/user/edit",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"res",
+								"user",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/res/user/add",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"res",
+								"user",
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UserSearch",
+			"item": [
+				{
+					"name": "page",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/system/res/user/search/page",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"system",
+								"res",
+								"user",
+								"search",
+								"page"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UserController",
+			"item": [
+				{
+					"name": "operateLogin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/uaa/user/operateLogin",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"uaa",
+								"user",
+								"operateLogin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UserResController",
+			"item": [
+				{
+					"name": "query",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"applicationId\":\"611270830508371968\",\n\t\"userId\":\"\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/res/user/resource/query",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"res",
+								"user",
+								"resource",
+								"query"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "treeify",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"applicationId\":\"\",\n\t\"userId\":\"\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/res/user/resource/treeify",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"res",
+								"user",
+								"resource",
+								"treeify"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UserRoleController",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"applicationId\":\"\",\n\t\"userId\":\"\",\n\t\"roleIds\":[\"\"]\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/res/user/role/add",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"res",
+								"user",
+								"role",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"applicationId\":\"\",\n\t\"userId\":\"\",\n\t\"roleIds\":[\"\"]\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/res/user/role/delete",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"res",
+								"user",
+								"role",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "query",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"applicationId\":\"\",\n\t\"userId\":\"\",\n\t\"roleIds\":[\"\"]\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/res/user/role/query",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"res",
+								"user",
+								"role",
+								"query"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RoleAuthController",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"applicationId\":\"\",\n\t\"roleId\":\"\",\n\t\"authorizationIds\":[\"\"]\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/res/role/auth/add",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"res",
+								"role",
+								"auth",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "query",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"applicationId\":\"\",\n\t\"roleId\":\"\",\n\t\"authorizationIds\":[\"\"]\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/res/role/auth/query",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"res",
+								"role",
+								"auth",
+								"query"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"applicationId\":\"\",\n\t\"roleId\":\"\",\n\t\"authorizationIds\":[\"\"]\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8110/res/role/auth/delete",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8110",
+							"path": [
+								"res",
+								"role",
+								"auth",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "pee",
+			"item": [
+				{
+					"name": "test",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BlockTransactionController",
+			"item": [
+				{
+					"name": "trade",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"txId\":\"txId\",\n\t\"peerNode\":\"peerNode\",\n\t\"contractName\":\"QATB\",\n\t\"transactionTime\":\"peerNode\",\n\t\"param\":[\"abc\",\"ef\"]\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8090/blocktrade/trade",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"blocktrade",
+								"trade"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sdk调用记录",
+			"item": [
+				{
+					"name": "添加sdk调用记录",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"contractName\":\"contract\",\n\t\"contractVersion\":\"1.0\",\n\t\"contractChannel\":\"合约通道\",\n\t\"contractFcn\":\"method\",\n\t\"projectName\":\"projectName\",\n\t\"organizationName\":\"organizationName\",\n\t\"result\":\"\",\n\t\"errorMsg\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8090/call/sdk/record/insert",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"call",
+								"sdk",
+								"record",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "条件分页查询sdk调用记录",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8090/call/sdk/record/page",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"call",
+								"sdk",
+								"record",
+								"page"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "合约调用记录列表",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"startTime\":\"\",\n\t\"endTime\":\"\",\n\t\"projectId\":\"\",\n\t\"pageNum\":1,\n\t\"pageSize\":10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8090/call/sdk/record/page/list",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"call",
+								"sdk",
+								"record",
+								"page",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	]
+}
