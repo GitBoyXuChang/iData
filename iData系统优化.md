@@ -929,24 +929,54 @@ x-userid：613463581383565312（用户id）
 
   
 
-10、
+### 10、调用记录增加字段 调用记录添加接口
 
-4) 
+- 接口描述：
 
-5) 
+  增加result和errorMsg字段，可为空
 
-6) /system/project/page-overview 接口增加部门作为条件，返回结果增加联系人和联系方式
+- 接口路径
 
- 
+  /system/call/sdk/record/insert
 
-7) 日志查询接口时间精确到秒
+- 接口参数
 
-8) 
+  ```json
+  {
+  	"contractName":"contacttestab",
+  	"contractVersion":"1.0",
+  	"contractChannel":"合约通道",
+  	"contractFcn":"method",
+  	"projectName":"projectName",
+  	"organizationName":"organizationName",
+  	"result":"code",
+  	"errorMsg":"msg"
+  }
+  ```
 
-9) 超级管理员能重置密码
+  
 
-10) 
+- 接口类型
 
-11) 登录接口返回用户信息和角色信息对象
+  POST
 
-默认三个角色信息
+- 接口返回
+
+  ```json
+  {
+      "returnCode": "0000",
+      "returnMsg": "Success",
+      "nonceStr": "3bb46563436341b58afc2f86b7434a48",
+      "success": true,
+      "data": true
+  }
+  ```
+
+  
+
+
+
+
+
+
+
