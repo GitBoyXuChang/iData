@@ -976,7 +976,70 @@ x-userid：613463581383565312（用户id）
 
   
 
+### 11、链上数据-业务总览
 
+- 接口描述：
+
+  只保留业务量，增加合约总量，合约模板数，链上文件（SYSTEM_EXIST_EVIDENCE），验真次数（SYSTEM_VERITY_TRUTH），链上数据（MONITOR_BLOCK_TRANSACTION）
+
+- 接口入参
+
+  ```json
+  {
+  	"applicationId":""
+  }
+  ```
+
+  
+
+- 接口路径
+
+  /monitor/index/total
+
+- 接口类型
+
+  POST
+
+- 接口返回
+
+  ```json
+  {
+      "returnCode": "0000",
+      "returnMsg": "Success",
+      "nonceStr": "c16bc94cbca74cddab770c90ee2f120f",
+      "success": true,
+      "data": {
+          "userTotal": 6,
+          "organizationTotal": 4,
+          "contractCallTotal": 68,
+          "contractCallTotalOnToday": 0,
+          "contractCallTotalOnWeek": 0,
+          "contractCallTotalOnMonth": 10,
+          "contractTotal": 21,
+          "projectTotal": 12,
+          "projectTotalOnToday": 0,
+          "projectTotalOnWeek": 0,
+          "projectTotalOnMonth": 0,
+          "contractTemplateTotal": 10,
+          "verityTruthTotal": 3,
+          "existEvidenceTotal": 3,
+          "transactionChainDataTotal": 22
+      }
+  }
+  ```
+
+  
+
+```java
+    //合约模板
+    private int contractTemplateTotal;
+    //验真次数
+    private int verityTruthTotal;
+    //链上文件
+    private int existEvidenceTotal;
+    //链上数据
+    private int transactionChainDataTotal;
+```
 
 
 
