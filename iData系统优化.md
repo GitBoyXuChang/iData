@@ -173,7 +173,18 @@ x-userid：613463581383565312（用户id）
 | **pageSize**       | Integer  | 是       | 分页参数 |
 | **pageNum**        | Integer  | 是       | 分页参数 |
 
- 
+ ```json
+{
+    "name":"7",
+    "organizationId":"618494327940722688",
+    "contact":"联系人",
+    "contactPhone":"13800138000",
+    "pageNum":1,
+    "pageSize":10
+}
+ ```
+
+
 
 **l** **接口请求路径**
 
