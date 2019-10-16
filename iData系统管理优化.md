@@ -172,6 +172,7 @@
   	"projectId":"",
   	"pageNum":1,
   	"pageSize":10,
+      "state":"",状态 0：正常  1：申请中 2：不可用
   	"startApplyTime":"20190115190421",申请时间-开始
   	"endApplyTime":"20191015190421",申请时间-结束
   	"startAwardTime":"20190115190421",颁发时间-开始
