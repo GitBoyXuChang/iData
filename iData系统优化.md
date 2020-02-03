@@ -61,7 +61,21 @@
 - 接口返回JSON
 
 ```json
-
+{
+    id: "673743044357292032"
+    number: "673743044357292032"
+    name: "张水寿"
+    description: "张水寿"
+    organizationId: "619227683267555328"
+    contact: "张水寿"
+    contactPhone: "15678764937"
+    host: "http://192.168.0.190"
+    createTime: "2020-02-02T20:14:19.315+0000"
+    sum: 24
+    ipAddress: "192.168.0.190"
+    userId: "668418773879775232"
+    state: "2"
+}
 ```
 
 #### 1.2 修改项目
